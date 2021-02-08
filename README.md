@@ -11,10 +11,10 @@ This project provides some special jupyter themes. You can:
 
 ## Previews
 ---
-### Pxxnhub theme
+### PH theme
 Catalog:
-<img src="./imgs/pxxxhub_tree.jpg">
+<img src="./imgs/ph_tree.jpg">
 Notebook:
-<img src="./imgs/pxxxhub_code.jpg">
+<img src="./imgs/ph_code.jpg">
 
 ---
