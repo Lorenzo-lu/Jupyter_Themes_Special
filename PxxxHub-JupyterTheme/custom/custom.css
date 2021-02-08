@@ -9,8 +9,10 @@ a hack to deal with our current css styles and no new styling should be added in
 #jupyter-main-app {
     position: relative;
 }
-div#notebook{
+.notebook_app {
     background-color: black;
+}
+div#notebook{
     min-height: max-content;
 }
 body{background-color: black; 
@@ -274,11 +276,12 @@ div#maintoolbar {
 } 
 
 .CodeMirror pre {
-    font-size: 0.8em!important; 
+    font-size:inherit; 
 }
 
-.output pre {font-size: 0.8em!important; 
+.output pre {
     background-color: transparent!important;
+    font-size:inherit;
 }
 div.input_area {
     border-width: 2px;
@@ -294,12 +297,10 @@ div.cm-s-ipython.CodeMirror {
 div.prompt,
 .prompt {
  font-family: monospace;
- font-size: 0.85em !important;
  font-weight: bold;
  text-decoration:double;
  color: rgb(245,145,0); 
  line-height: 1.25em;
-
 }
 
 .cm-s-ipython span.cm-keyword {
