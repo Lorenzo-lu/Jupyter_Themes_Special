@@ -1,13 +1,3 @@
-<style>
-.content {
-  max-width: 100%;
-  //margin: 0% 20%;
-  font-size:  125%;
-  font-family: "times";
-}
-</style>
-
-<div class = content>
 
 # Jupyter Themes
 
@@ -19,4 +9,3 @@ This project provides some special jupyter themes. You can:
 4. Enjoy it!
 
 
-</div>
