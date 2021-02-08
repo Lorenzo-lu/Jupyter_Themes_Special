@@ -4,12 +4,14 @@ a hack to deal with our current css styles and no new styling should be added in
 
 #ipython-main-app {
     position: relative;
+    height:max-content;
 }
 #jupyter-main-app {
     position: relative;
 }
 div#notebook{
     background-color: black;
+    min-height: max-content;
 }
 body{background-color: black; 
 }
