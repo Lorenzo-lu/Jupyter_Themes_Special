@@ -32,7 +32,8 @@ body > #header .header-bar {
    }
 
 
-.container { width: 70%!important;     
+.container { 
+    width: 70% !important;    
     background-color: transparent!important; 
     background-color: rgba(245,145,0,1) !important;
     padding: 0% 5%; 
@@ -248,7 +249,7 @@ div#maintoolbar {
     background: transparent !important;
    }
 #maintoolbar-container{
-    width:100%!important;
+    width:100% !important;
     text-align: center !important;
     background: transparent !important;
 }

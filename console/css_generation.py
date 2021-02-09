@@ -2,7 +2,7 @@ import os;
 import shutil;
 def css_generation(PATH, theme, markdown_size, markdown_line_height,
                    code_size, code_line_height):
-    file_path = os.getcwd();
+    code_path = os.getcwd();
     
     theme = 'default' if not theme else theme;
     markdown_size = 'none' if not markdown_size else markdown_size;
@@ -12,10 +12,27 @@ def css_generation(PATH, theme, markdown_size, markdown_line_height,
     
 
     os.chdir('themes');
-    themename = theme + '.txt';
-    if themename in os.listdir():        
-        file = open(themename, 'r');
-        css = file.read();
+    if 'custom' in os.listdir():
+        shutil.rmtree('custom');
+    os.mkdir('custom');
+    
+    if theme in os.listdir():
+        os.chdir(theme);
+        for item in os.listdir():
+            src = '%s/themes/%s/%s'%(code_path, theme, item);
+            tgt = '%s/themes/custom/%s'%(code_path, item);            
+            try:
+                shutil.copytree(src, tgt);
+            except:
+                shutil.copy(src, tgt);
+        #file = open('custom.css', 'r');
+        #css = file.read();
+
+    os.chdir('%s/themes/custom'%(code_path));
+    if 'custom.css' in os.listdir():
+        file = open('custom.css', 'r');
+        css = file.read(); 
+        os.remove('custom.css');
     else:
         css = '';
 
@@ -23,18 +40,30 @@ def css_generation(PATH, theme, markdown_size, markdown_line_height,
         line-height: %s}\n\n'%(markdown_size, markdown_line_height);
     css = css + '.output pre, .CodeMirror-code{\nfont-size:%s;\n\
         line-height: %s}\n\n'%(code_size, code_line_height);
-
+    
+    file = open('custom.css', 'w+');
+    file.write(css);
+    new_css_loc = os.getcwd();
+    
     os.chdir(PATH);
     if 'custom' in os.listdir():
         shutil.rmtree('custom');
 
-    os.mkdir('custom');
-    css_file = open('custom/custom.css', 'w+');
-    css_file.write(css);
+    shutil.move(new_css_loc, '%s/custom'%PATH);
+    
 
-    os.chdir(file_path);
+    #
+
+    
+    #css_file = open('custom/custom.css', 'w+');
+    #css_file.write(css);
+
+    os.chdir(code_path);
     if '__pycache__' in os.listdir():
         shutil.rmtree('__pycache__');
+    os.chdir(code_path + '/themes');
+    if 'custom' in os.listdir():
+        shutil.rmtree('custom');
     print('Done!')
 
 
