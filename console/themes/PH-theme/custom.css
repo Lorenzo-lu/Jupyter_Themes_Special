@@ -11,29 +11,39 @@
 div#notebook{
     min-height: max-content;
 }
-body{background-color: black; 
+body{
+    background-color: black; 
 }
 
+body > #header #header-container{
+    width: 100% !important;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#menubar .navbar-collapse {
+    padding-left:10%;
+}
+#kernel_indicator {
+    margin-right:5%;
+}
 
-body > #header {opacity: 1;
-    background-color: black;
+body > #header {
+    opacity: 1;
+    background-color: transparent;
 }
 
 body > #header >div >div {
-    background-color: transparent; 
-    
+    background-color: transparent;     
 }
-
 body > #header .header-bar {    
     width: 100%;
     margin: 0% 0%;;
     height:3px;
     background: white; 
-   }
-
+}
 
 .container { 
-    width: 70% !important;    
+    width:70%;
     background-color: transparent!important; 
     background-color: rgba(245,145,0,1) !important;
     padding: 0% 5%; 
@@ -46,9 +56,7 @@ body > #header .header-bar {
     font-weight: bold;
     border: none;
     text-shadow: none !important;
-}
-
- 
+} 
 
 .list_container {
     border: 2px solid white;
