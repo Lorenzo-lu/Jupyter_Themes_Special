@@ -298,7 +298,7 @@ div.input_prompt {
 };
 
 div.cm-s-ipython.CodeMirror {
-    font-family: monospace, courier, monospace !important;   
+    font-family: monospace, ubuntu mono, courier, monospace !important;   
 }
 
 div.prompt,.prompt {
