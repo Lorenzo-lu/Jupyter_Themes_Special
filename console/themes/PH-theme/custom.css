@@ -269,7 +269,7 @@ div#maintoolbar {
  display: inline;
  font-size: 92%;
 
- background-color: rgb(254,154,0) !important;
+ background-color: rgb(245,145,0) !important;
  border: 0px solid black!important;
  color: black;
 }
@@ -291,28 +291,30 @@ div#maintoolbar {
 div.input_area {
     border-width: 2px;
     border-radius: 0px;
+    background-color: whitesmoke;
 }
+div.input_prompt {
+    color: rgb(245,145,0)!important;
+};
 
 div.cm-s-ipython.CodeMirror {
-    font-family: Ubuntu mono, monospace, courier, monospace !important;
-    background: rgb(245,255,255);     
-    
+    font-family: monospace, courier, monospace !important;   
 }
 
-div.prompt,
-.prompt {
+div.prompt,.prompt {
  font-family: monospace;
- font-weight: bold;
- text-decoration:double;
- color: rgb(245,145,0); 
- line-height: 1.25em;
+ font-weight: normal;
+ /*text-decoration:double;*/
+ /*color: rgb(245,145,0); */
+ /*line-height: 1.25em;*/
+ font-size: 90%;
+ color: black;
 }
 
 .cm-s-ipython span.cm-keyword {
-    color: rgb(254,154,0);
+    color: rgb(230,130,0);
     font-weight: bold;
-
-   }
+}
 
 .cm-s-ipython span.cm-builtin {
     color:rgb(254,154,0);    /*builtin的print等函数的颜色  E85C48   a6e22e*/
