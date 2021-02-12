@@ -43,6 +43,14 @@ body > #header .header-bar {
     background: white; 
 }
 
+#site:after{
+    content: "By Lorenzo-Lu";
+    font-weight: bold;
+    color:whitesmoke;
+    position:absolute;
+    right: 2%;
+    bottom: 1%;
+}
 .container { 
     width:70%;
     background-color: transparent!important; 
