@@ -27,6 +27,7 @@ body > #header #header-container{
     margin-right:5%;
 }
 
+
 body > #header {
     opacity: 1;
     background-color: transparent;
@@ -50,6 +51,7 @@ body > #header .header-bar {
     opacity: 1;
     color: black!important;
     font-weight: bold;
+    min-height: 100%;
 }
 .container a {
     color: black;
