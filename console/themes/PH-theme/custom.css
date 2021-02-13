@@ -44,7 +44,8 @@ body > #header .header-bar {
 }
 
 #site:after{
-    content: "By Lorenzo-Lu";
+    content: "\f09b  Lorenzo-lu";
+    font-family: 'FontAwesome';
     font-weight: bold;
     color:whitesmoke;
     position:absolute;
