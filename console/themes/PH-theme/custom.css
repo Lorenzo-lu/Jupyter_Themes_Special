@@ -310,6 +310,10 @@ div.input_prompt {
 
 div.cm-s-ipython.CodeMirror {
     font-family: monospace, ubuntu mono, courier, monospace !important;   
+    background-color: whitesmoke!important;
+}
+.CodeMirror {
+    background-color: whitesmoke;
 }
 
 div.prompt,.prompt {
