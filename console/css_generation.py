@@ -3,7 +3,6 @@ import shutil;
 def css_generation(PATH, theme, markdown_size, markdown_line_height,
                    code_size, code_line_height):
     code_path = os.getcwd();
-    
     theme = 'default' if not theme else theme;
     markdown_size = 'none' if not markdown_size else markdown_size;
     markdown_line_height = 'none' if not markdown_line_height else markdown_line_height;
@@ -35,11 +34,13 @@ def css_generation(PATH, theme, markdown_size, markdown_line_height,
         os.remove('custom.css');
     else:
         css = '';
-
+    
     css = css + 'div.inner_cell{\nfont-size: %s;\n\
         line-height: %s}\n\n'%(markdown_size, markdown_line_height);
     css = css + '.output pre, .CodeMirror-code{\nfont-size:%s;\n\
         line-height: %s}\n\n'%(code_size, code_line_height);
+    css = css + 'div.prompt,.prompt{\nfont-size:%s;\n\
+        }\n\n'%(code_size);
     
     file = open('custom.css', 'w+');
     file.write(css);
@@ -51,13 +52,6 @@ def css_generation(PATH, theme, markdown_size, markdown_line_height,
 
     shutil.move(new_css_loc, '%s/custom'%PATH);
     
-
-    #
-
-    
-    #css_file = open('custom/custom.css', 'w+');
-    #css_file.write(css);
-
     os.chdir(code_path);
     if '__pycache__' in os.listdir():
         shutil.rmtree('__pycache__');
