@@ -18,7 +18,7 @@ css_generation(PATH, theme, markdown_size, markdown_line_height,
      code_size, code_line_height);
 
 
-##############################
+###############################
 # PATH -> the path name of your .jupyter folder
 # theme -> you can find theme in the folder 'themes'
 #          if want to use 'default', leave it as None
