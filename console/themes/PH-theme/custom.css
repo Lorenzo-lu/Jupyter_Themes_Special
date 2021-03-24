@@ -13,6 +13,7 @@ div#notebook{
 }
 body{
     background-color: black; 
+    font-family: arial;
 }
 
 body > #header #header-container{
@@ -114,6 +115,7 @@ color: black;
 font-weight: bold;
 content: "\f02d";
 vertical-align: middle;
+
 }
 .running_notebook_icon:before {
     color: black;
@@ -185,6 +187,7 @@ span#login_widget > .button, #logout, #shutdown {
     border: 2px solid white;
     margin-left: 10px;
     font-weight: bold;
+    /*box-shadow: 5px 5px 5px -3px black;*/
 }
 .notification_widget{
     font-weight: bold;
@@ -291,6 +294,40 @@ div#maintoolbar {
     font-weight: normal;
 } 
 
+div.cell.selected:before, div.cell.selected.jupyter-soft-selected:before{
+    background: transparent;   
+}
+.edit_mode div.cell.selected:before{
+    background: transparent;    
+}
+.edit_mode div.cell.selected{
+    border: 1px solid gray;
+    /*box-shadow: none;*/
+}
+/*the first is the code area in edit mode, the next is the markdown area*/
+/*.edit_mode div.cell.selected > div.input > div.inner_cell > div.input_area,
+.edit_mode div.cell.selected > div.inner_cell > div.input_area{
+    box-shadow: 5px 5px 5px -3px black;
+    border: 2px solid rgba(245,145,0,1);
+}*/
+div.cell.selected, div.cell.selected.jupyter-soft-selected {
+    border: 1px solid gray;
+    border-radius: 0px;
+    box-shadow: 5px 5px 5px -3px black;
+}
+.edit_mode div.cell.selected > div.input > div.prompt_container >div.prompt{
+    color: rgb(245,145,0);
+}
+/* content catalog
+#toc-wrapper{
+    background: rgb(245,145,0)!important;
+    border-width:0px !important;
+}
+#toc a, #navigate_menu a, .toc{
+    background: transparent!important;
+}
+*/
+
 .CodeMirror pre {
     font-size:inherit; 
 }
@@ -300,20 +337,20 @@ div#maintoolbar {
     font-size:inherit;
 }
 div.input_area {
-    border-width: 2px;
+    border-width: 1px;
+    border-color: gray;
     border-radius: 0px;
     background-color: whitesmoke;
 }
-div.input_prompt {
-    color: rgb(245,145,0)!important;
-};
 
 div.cm-s-ipython.CodeMirror {
-    font-family: monospace, "ubuntu mono", courier, monospace !important;   
-    background-color: whitesmoke!important;
+    font-family: monospace, ubuntu mono, courier, monospace !important;   
+    background-color: transparent;
 }
-.CodeMirror {
-    background-color: whitesmoke;
+/*.CodeMirror-scroll, .CodeMirror-sizer, .CodeMirror-gutter, .CodeMirror-gutters, .CodeMirror-linenumber*/
+/*the line number area*/
+.CodeMirror-gutters{
+    background-color: transparent;
 }
 
 div.prompt,.prompt {
