@@ -6,7 +6,7 @@ from css_generation import css_generation;
 # this is the path to your '.jupyter' folder (required)
 PATH = '/Users/yizhoulu/.jupyter'; 
 
-theme = 'PH-theme';
+theme = 'Tiger_theme';
 code_size = '11px';                 
 code_line_height = '140%';
 markdown_size = '13px';
