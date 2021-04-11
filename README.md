@@ -14,8 +14,8 @@ This project provides some special jupyter themes. You can:
 ---
 ### PH theme
 Catalog:
-<img src="./imgs/ph_tree.jpg">
+<img src="./imgs/Tiger_tree.jpg">
 Notebook:
-<img src="./imgs/ph_code.jpg">
+<img src="./imgs/Tiger_code.jpg">
 
 ---
