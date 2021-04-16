@@ -2,11 +2,15 @@
 
 
 from css_generation import css_generation;
+import subprocess as sp;
 
 # this is the path to your '.jupyter' folder (required)
-PATH = '/Users/yizhoulu/.jupyter'; 
+#PATH = '/Users/yizhoulu/.jupyter';
+PATH = sp.getoutput('jupyter --config');
+print("Your jupyter config dir is %s"%PATH);
 
 theme = 'Tiger_theme';
+#theme = 'default';
 code_size = '11px';                 
 code_line_height = '140%';
 markdown_size = '13px';
