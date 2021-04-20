@@ -2,12 +2,17 @@
 
 
 from css_generation import css_generation;
-import subprocess as sp;
 
-# this is the path to your '.jupyter' folder (required)
+try:
+    import subprocess as sp;
+    PATH = sp.getoutput('jupyter --config');
+except:
+    print('Please install subprocess module first.\nhttps://pypi.org/project/subprocess.run/');
+    exit();
+# this is the path to your '.jupyter' folder (if the code above doesn't work)
 #PATH = '/Users/yizhoulu/.jupyter';
-PATH = sp.getoutput('jupyter --config');
 print("Your jupyter config dir is %s"%PATH);
+
 
 theme = 'Tiger_theme';
 #theme = 'default';
