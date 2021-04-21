@@ -1,0 +1,255 @@
+/*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+body{background-color: gray; background-image: url("WallPaper5.jpg"); background-size:35%}
+//body{background-color:azure !important;
+}
+
+
+body > #header {opacity: 1;
+    background-color: transparent;
+}
+
+body > #header >div >div {
+    background-color: whitesmoke; /*jupyter的标志显示底色*/
+}
+
+body > #header .header-bar {    /*这里有一根bar比较影响美观*/
+    width: 100%;
+    background: transparent; 
+   }
+
+
+.container { width: 70%!important;     
+    background-color: transparent!important; 
+    padding: 0% 5%; /*让目录页不顶格*/
+    opacity: 1;
+    color: red;
+    font-weight: normal;
+}
+.container a {
+    color: skyblue;
+    
+    border: none;
+    text-shadow: none !important;
+}
+
+ 
+
+.list_container {
+    border: 0px solid white;
+    background-color: rgba(255,255,255,0.);
+   }
+.list_container > div {    
+border-bottom: 1px solid gray;
+}
+
+.list_header a {
+    color: skyblue;
+    border: none;
+    text-shadow: none !important;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.list_header {
+    background-color: transparent;
+    color: none;
+}
+.list_header > div {
+    color: white;
+}
+
+.list_header > div .item_link,
+.list_item > div .item_link {
+    margin-left: -1px;
+    vertical-align: middle;
+    /*line-height: 22px;
+    font-size: 13pt;*/
+}
+div.list_item a, div.list_item {
+    color:skyblue;
+}
+div.list_item:hover {
+    background-color:red;      
+}
+div.list_item:hover a {
+    color:white;      
+}
+
+/*文件前的图标*/
+.noteicon:before, .folder_icon:before, .file_icon:before{
+color: skyblue;
+font-weight: bold;
+}
+
+
+
+/*
+#running .panel-group .panel .panel-heading 
+{
+    background-color: black!important;
+}
+#running .panel-group .panel .panel-heading a {
+color:white
+}
+#running .panel-group .panel {
+    color:black
+}
+#running .panel-group .panel a{
+    color:black
+}
+
+
+
+/***********************************/
+
+
+/*修改munubar*/
+div#menubar-container {
+    text-align: center;
+    background-color: transparent!important;
+   }
+#menubar,
+div#menubar {
+background-color: transparent !important;
+/*padding: 0% 10% !important;*/
+text-align: center !important;
+width:100% ;
+}
+#menubar .navbar,
+.navbar-default {
+    text-align: center;
+    background-color: transparent;
+    width:100%;
+    color: white;
+    border-width:0pt;
+    opacity: 1;
+}
+div.navbar-text,
+.navbar-text,
+.navbar-text.indicator_area,
+p.navbar-text.indicator_area {
+    color: greenyellow !important;
+}
+.navbar-default {    
+    color: greenyellow !important;
+}
+.navbar-default .navbar-nav > li > a {
+    color: greenyellow !important;
+   }
+/***********************************/
+
+
+/*修改选项*/
+
+div#maintoolbar {
+    /*position: absolute;
+    width: 90%;
+    margin-left: -10%;
+    padding-right: 8%;
+    float: left;*/
+    background: transparent !important;
+   }
+#maintoolbar-container{
+    width:100%!important;
+    text-align: center !important;
+    /*padding:0% 0% !important;
+    opacity: 1;*/
+    background: transparent !important;
+}
+
+
+.toolbar select,
+.toolbar label { 
+ vertical-align: middle;
+ display: inline;
+ font-size: 92%;
+
+ background-color: forestgreen !important;
+ border: 2px solid black!important;
+ color: white;
+}
+
+
+
+/*修改coding区域*/
+#notebook-container {
+    width: 60%!important;   
+    background-color:white !important; 
+} 
+
+.CodeMirror pre {/*font-family: none !important; */
+    font-size: 0.8em!important; /*line-height:1.25em !important;*/
+}
+
+.output pre {font-size: 0.8em!important; /*line-height:1.25em !important; */
+    background-color: transparent!important;
+}
+
+div.cm-s-ipython.CodeMirror {
+    font-family: Ubuntu mono, monospace, courier, monospace !important;
+    background: rgba(230,240,255, 1);     /*修改代码cell的背景颜色 f8f8f0   838383*/  
+    /*color: #B4EB8B;         /*282828    */ 
+    /*border-radius: 2em; */
+   }
+
+div.prompt,
+.prompt {
+ font-family: monospace;
+ font-size: 0.85em !important;
+ font-weight: normal;
+ text-decoration:double;
+ //color: transparent;
+color: Red; // very important
+ line-height: 1.25em;
+/*
+ padding: 0px;
+ padding-top: 4px;
+ padding-left: 0px;
+ padding-right: 1px;
+ text-align: right !important;
+ min-width: 8ex !important;
+ width: 8ex !important;
+*/
+}
+
+.cm-s-ipython span.cm-keyword {
+    //color: red;
+    //font-weight: bold;
+   }
+
+.cm-s-ipython span.cm-builtin {
+    //color: blue;    /*builtin的print等函数的颜色  E85C48   a6e22e*/
+}
+
+.cm-s-ipython span.cm-number {
+    //color: blue;
+}
+
+.cm-s-ipython span.cm-string {
+    //color:saddlebrown;
+}
+
+.cm-s-ipython span.cm-operator {
+    //color: red;
+}
+
+.cm-s-ipython span.cm-variable {
+    //color: purple;   /*DDD26D f8f8f0  5FB41F  49483e  5FB41F */      /*修改cell的正常代码字体*/
+}
+
+.cm-s-ipython span.cm-comment {
+    //color:gray;      /* 5FB41F   75715e  DDD26D 808080*/
+}
+.cm-s-ipython span.cm-property {
+    //color: blue;      /*修改函数 f8f8f0  B4EB8B 5FB41F  6246F0 E9A374*/
+}
