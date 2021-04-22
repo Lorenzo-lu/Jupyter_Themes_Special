@@ -14,8 +14,16 @@ body{background-color: gray; background-image: url("WallPaper5.jpg"); background
 }
 
 
-body > #header {opacity: 1;
+body > #header {
+    opacity: 1;
     background-color: transparent;
+    /*background-image:linear-gradient(green,blue);*/
+}
+
+body > #header #header-container{
+    background-image:linear-gradient(green,blue);
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 body > #header >div >div {
@@ -28,7 +36,7 @@ body > #header .header-bar {    /*这里有一根bar比较影响美观*/
    }
 
 
-.container { width: 70%!important;     
+.container { /*width: 80%!important;     */
     background-color: transparent!important; 
     padding: 0% 5%; /*让目录页不顶格*/
     opacity: 1;
@@ -45,8 +53,8 @@ body > #header .header-bar {    /*这里有一根bar比较影响美观*/
  
 
 .list_container {
-    border: 0px solid white;
-    background-color: rgba(255,255,255,0.);
+    /*border: 0px solid white;*/
+    background-color: black;
    }
 .list_container > div {    
 border-bottom: 1px solid gray;
@@ -183,7 +191,7 @@ div#maintoolbar {
 
 /*修改coding区域*/
 #notebook-container {
-    width: 60%!important;   
+    width: 70%;   
     background-color:white !important; 
 } 
 
