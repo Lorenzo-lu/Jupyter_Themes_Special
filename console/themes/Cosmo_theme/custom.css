@@ -29,6 +29,7 @@ body > #header #header-container{
 
 body > #header >div >div {
     background-color: whitesmoke; /*jupyter的标志显示底色*/
+    padding: 0px 10px;
 }
 
 body > #header .header-bar {    /*这里有一根bar比较影响美观*/
@@ -51,6 +52,16 @@ body > #header .header-bar {    /*这里有一根bar比较影响美观*/
     text-shadow: none !important;
 }
 
+.nav-tabs > li:hover{
+    background-color: black!important;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: black;
+    color: white;
+    border: 1px solid #ddd;
+    border-bottom: 0px;
+}
  
 
 .list_container {
@@ -161,8 +172,7 @@ width:100% ;
     background-color: transparent;
 }
 .navbar-nav > li > .dropdown-menu {
-    background-color: black;
-    color: skyblue;
+    
 }
 
 div.navbar-text,
