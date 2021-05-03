@@ -4,6 +4,7 @@ a hack to deal with our current css styles and no new styling should be added in
 
 #ipython-main-app {
     position: relative;
+    /*width: 100%;*/
 }
 #jupyter-main-app {
     position: relative;
@@ -27,6 +28,10 @@ body > #header #header-container{
     padding-right: 10%;
 }
 
+#tab_content{
+    margin: 0px 15%;
+}
+
 body > #header >div >div {
     background-color: whitesmoke; /*jupyter的标志显示底色*/
     padding: 0px 10px;
@@ -40,10 +45,11 @@ body > #header .header-bar {    /*这里有一根bar比较影响美观*/
 
 .container { /*width: 80%!important;     */
     background-color: transparent!important; 
-    padding: 0% 5%; /*让目录页不顶格*/
+    /*padding: 0% 5%; /*让目录页不顶格*/
     opacity: 1;
     color: red;
     font-weight: normal;
+    width:100%;
 }
 .container a {
     color: skyblue;
@@ -167,12 +173,33 @@ width:100% ;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
-    border: 1px solid greenyellow;
+    border: 2px solid skyblue;
     border-bottom: 0px;
-    background-color: transparent;
+    background-color: black;
 }
-.navbar-nav > li > .dropdown-menu {
-    
+
+.dropdown-menu {    
+    color: skyblue;
+    background-color: black;
+    border: 2px solid skyblue;
+}
+
+.dropdown-menu > li > a{
+    color: inherit;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+    color:white;
+    background-color: red;
+}
+.dropdown-submenu > a:after{
+    color:inherit;
+}
+.dropdown-menu .divider{
+    background-color: skyblue;
+}
+
+.kb, .kb kbd{
+    color:inherit;
 }
 
 div.navbar-text,
@@ -229,10 +256,10 @@ div#maintoolbar {
 } 
 
 .CodeMirror pre {/*font-family: none !important; */
-    font-size: 0.8em!important; /*line-height:1.25em !important;*/
+    font-size: 0.8em; /*line-height:1.25em !important;*/
 }
 
-.output pre {font-size: 0.8em!important; /*line-height:1.25em !important; */
+.output pre {font-size: 0.8em; /*line-height:1.25em !important; */
     background-color: transparent!important;
 }
 
@@ -246,7 +273,7 @@ div.cm-s-ipython.CodeMirror {
 div.prompt,
 .prompt {
  font-family: monospace;
- font-size: 0.85em !important;
+ font-size: 0.85em;
  font-weight: normal;
  text-decoration:double;
  //color: transparent;
