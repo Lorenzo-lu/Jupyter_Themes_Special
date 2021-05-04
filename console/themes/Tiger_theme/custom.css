@@ -289,7 +289,7 @@ div#maintoolbar {
 }
 
 #notebook-container {
-    width: 60%!important;   
+    /*width: 60%!important;  */ 
     background-color:white !important; 
     font-weight: normal;
 } 
