@@ -3,17 +3,6 @@
 
 from css_generation import css_generation;
 
-'''
-try:
-    import subprocess as sp;
-    path = sp.getoutput('jupyter --config');
-except:
-    print('Please install subprocess module first.\nhttps://pypi.org/project/subprocess.run/');
-    exit();
-# this is the path to your '.jupyter' folder (if the code above doesn't work)
-
-PATH = '/Users/yizhoulu/.jupyter';
-'''
 File = open("jupyter_path.txt", "r");
 path = File.read()[:-1]; ## drop the /n in the file
 print("Your jupyter config dir is %s"%path);
