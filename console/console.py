@@ -8,8 +8,9 @@ path = File.read()[:-1]; ## drop the /n in the file
 print("Your jupyter config dir is %s"%path);
 
 
-theme = 'Tiger_theme';
+#theme = 'Tiger_theme';
 #theme = 'default';
+theme = 'Cosmo_theme';
 code_size = '11px';                 
 code_line_height = '140%';
 markdown_size = '13px';
