@@ -12,7 +12,7 @@ This project provides some special jupyter themes. You can:
 
 ## Previews
 ---
-### PH theme
+### Tiger theme
 Catalog:
 <img src="./imgs/Tiger_tree.jpg">
 Notebook:
