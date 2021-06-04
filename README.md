@@ -18,4 +18,10 @@ Catalog:
 Notebook:
 <img src="./imgs/Tiger_code.jpg">
 
+### Cosmo theme
+Catalog:
+<img src="./imgs/Cosmo_tree.jpg">
+Notebook:
+<img src="./imgs/Cosmo_code.jpg">
+
 ---
