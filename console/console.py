@@ -5,12 +5,13 @@ from css_generation import css_generation;
 
 File = open("jupyter_path.txt", "r");
 path = File.read()[:-1]; ## drop the /n in the file
+File.close();
 print("Your jupyter config dir is %s"%path);
 
 
-#theme = 'Tiger_theme';
+theme = 'Tiger_theme';
 #theme = 'default';
-theme = 'Cosmo_theme';
+#theme = 'Cosmo_theme';
 code_size = '11px';                 
 code_line_height = '140%';
 markdown_size = '13px';

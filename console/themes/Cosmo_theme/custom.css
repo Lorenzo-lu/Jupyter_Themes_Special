@@ -4,7 +4,7 @@ a hack to deal with our current css styles and no new styling should be added in
 
 #ipython-main-app {
     position: relative;
-    /*width: 100%;*/
+    /*width: 80%;*/
 }
 #jupyter-main-app {
     position: relative;
@@ -50,6 +50,7 @@ body > #header .header-bar {    /*这里有一根bar比较影响美观*/
     color: red;
     font-weight: normal;
     width:100%;
+    min-height:100%;
 }
 .container a {
     color: skyblue;
