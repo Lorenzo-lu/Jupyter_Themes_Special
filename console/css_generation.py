@@ -31,6 +31,7 @@ def css_generation(PATH, theme, markdown_size, markdown_line_height,
     if 'custom.css' in os.listdir():
         file = open('custom.css', 'r');
         css = file.read(); 
+        file.close();
         os.remove('custom.css');
     else:
         css = '';
@@ -44,6 +45,7 @@ def css_generation(PATH, theme, markdown_size, markdown_line_height,
     
     file = open('custom.css', 'w+');
     file.write(css);
+    file.close();
     new_css_loc = os.getcwd();
     
     os.chdir(PATH);
