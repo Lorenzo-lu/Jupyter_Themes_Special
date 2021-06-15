@@ -155,9 +155,9 @@ div.list_item:hover >div>.file_icon:before
 }
 
 .btn-default {
-    color:color4;
+    color:white;
     border-color: color4;
-    background-color: color2;
+    background-color: black;
     font-weight:bold;
 }
 .nav-tabs {
@@ -167,7 +167,7 @@ div.list_item:hover >div>.file_icon:before
 .nav-tabs > li.active > a:focus{
     color:color4;
     background-color: color2;
-    border: 2px solid color4;
+    border: 2px solid color3;
     border-bottom-color: transparent;
 }
 .navbar-default .navbar-nav > .open > a, 
@@ -191,7 +191,7 @@ span#login_widget > .button, #logout, #shutdown {
 }
 .dropdown-menu {
     background-color: color2;
-    border: 3px solid color1;
+    border: 3px solid color4;
     border-top: 0px;
 }
 .dropdown-menu > li > a{
@@ -202,7 +202,7 @@ span#login_widget > .button, #logout, #shutdown {
     color:color4;
 }
 #new-menu .dropdown-header{
-    color:color1;
+    color:color3;
     font-weight: bold;
 }
 .kb{
@@ -271,9 +271,9 @@ div#maintoolbar {
  vertical-align: middle;
  display: inline;
  font-size: 92%;
-
  background-color: color1;
  color: color3;
+ border-width: 0px;
 }
 
 #notebook-container {
@@ -297,7 +297,8 @@ div.cell.selected, div.cell.selected.jupyter-soft-selected {
     box-shadow: 5px 5px 5px -3px black;
 }
 .edit_mode div.cell.selected > div.input > div.prompt_container >div.prompt{
-    color: red;
+    /*color: red;*/
+    font-weight: bold;;
 }
 
 /*coding area*/
@@ -333,7 +334,7 @@ div.prompt,.prompt {
 }
 
 .cm-s-ipython span.cm-keyword {
-    color: color1;
+    /*color: color1;*/
     font-weight: bold;
 }
 
@@ -373,6 +374,12 @@ font-size:11px;
     color:black;
 }
 
-.list_container > div:last-child{
+#running .panel-group .panel .panel-body .list_container{
     background-color:color1;
+}
+#running .panel-group .panel .panel-body .list_container:hover{
+    color:color3;
+}
+#modal_indicator{
+    color: color3;
 }

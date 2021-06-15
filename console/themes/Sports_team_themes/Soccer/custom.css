@@ -90,11 +90,11 @@ body > #header .header-bar {
 }
 
 .list_header a {
-    color: white;
+    color: whitesmoke;
 }
 .list_header {
     background-color: rgb(0, 102, 178);
-    color: white;
+    color: whitesmoke;
 }
 .list_header > div .item_link,
 .list_item > div .item_link {
@@ -106,10 +106,10 @@ div.list_item a, div.list_item {
 }
 div.list_item:hover {
     background-color:rgb(0, 102, 178);  
-    color:white;    
+    color:whitesmoke;    
 }
 div.list_item:hover a {
-    color:white;      
+    color:whitesmoke;      
 }
 
 /*文件前的图标*/
@@ -144,20 +144,20 @@ div.list_item:hover a {
     font-weight: bold;
 }
 .breadcrumb > li + li:before{   
-    color:white;
+    color:whitesmoke;
 }
 
 div.list_item:hover >div>.notebook_icon:before, 
 div.list_item:hover >div>.folder_icon:before,
 div.list_item:hover >div>.file_icon:before
 {
-    color: white;  
+    color: whitesmoke;  
 }
 
 .btn-default {
     color:white;
-    border-color: white;
-    background-color: rgb(0, 102, 178);
+    border-color: whitesmoke;
+    background-color: black;
     font-weight:bold;
 }
 .nav-tabs {
@@ -165,7 +165,7 @@ div.list_item:hover >div>.file_icon:before
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, 
 .nav-tabs > li.active > a:focus{
-    color:white;
+    color:whitesmoke;
     background-color: rgb(0, 102, 178);
     border: 2px solid white;
     border-bottom-color: transparent;
@@ -180,7 +180,7 @@ div.list_item:hover >div>.file_icon:before
     color:rgb(220, 5, 45);
 }
 span#login_widget > .button, #logout, #shutdown {
-    color: white;
+    color: whitesmoke;
     background-color: rgb(0, 102, 178);
     border: 2px solid white;
     margin-left: 10px;
@@ -191,36 +191,36 @@ span#login_widget > .button, #logout, #shutdown {
 }
 .dropdown-menu {
     background-color: rgb(0, 102, 178);
-    border: 3px solid rgb(220, 5, 45);
+    border: 3px solid whitesmoke;
     border-top: 0px;
 }
 .dropdown-menu > li > a{
     font-weight: bold;
-    color:white;
+    color:whitesmoke;
 }
 .dropdown-submenu > a:after {
-    color:white;
+    color:whitesmoke;
 }
 #new-menu .dropdown-header{
-    color:rgb(220, 5, 45);
+    color:white;
     font-weight: bold;
 }
 .kb{
-    color:white;
+    color:whitesmoke;
 }
 .kb kbd {
     white-space: nowrap;
-    color: white;
+    color: whitesmoke;
     font-weight: bold;
 }
 .dropdown-menu > li:hover >a> .kb,.dropdown-menu > li:hover >a> .kb kbd{
     color: white;  
 }
 .item_icon{
-    color:white;
+    color:whitesmoke;
 }
 .dropdown-menu > li > a > *:before{
- color:white;
+ color:whitesmoke;
 }
 .dropdown-menu > li:hover > a > *:before{
     color:white;
@@ -241,21 +241,21 @@ width:100% ;
     text-align: center;
     background-color: transparent;
     width:100%;
-    color: white;
+    color: whitesmoke;
     border-width:0pt;
     opacity: 1;
 }
 div.navbar-text,.navbar-text,
 .navbar-text.indicator_area,
 p.navbar-text.indicator_area,#kernel_indicator {
-    color: white;
+    color: whitesmoke;
     font-weight: bold;
 }
 .navbar-default {    
-    color: white;
+    color: whitesmoke;
 }
 .navbar-default .navbar-nav > li > a {
-    color: white;
+    color: whitesmoke;
     font-weight: bold;
 }
 div#maintoolbar {
@@ -271,9 +271,9 @@ div#maintoolbar {
  vertical-align: middle;
  display: inline;
  font-size: 92%;
-
  background-color: rgb(220, 5, 45);
  color: white;
+ border-width: 0px;
 }
 
 #notebook-container {
@@ -297,7 +297,8 @@ div.cell.selected, div.cell.selected.jupyter-soft-selected {
     box-shadow: 5px 5px 5px -3px black;
 }
 .edit_mode div.cell.selected > div.input > div.prompt_container >div.prompt{
-    color: red;
+    /*color: red;*/
+    font-weight: bold;;
 }
 
 /*coding area*/
@@ -333,7 +334,7 @@ div.prompt,.prompt {
 }
 
 .cm-s-ipython span.cm-keyword {
-    color: rgb(220, 5, 45);
+    /*color: rgb(220, 5, 45);*/
     font-weight: bold;
 }
 
@@ -373,6 +374,12 @@ font-size:11px;
     color:black;
 }
 
-.list_container > div:last-child{
+#running .panel-group .panel .panel-body .list_container{
     background-color:rgb(220, 5, 45);
+}
+#running .panel-group .panel .panel-body .list_container:hover{
+    color:white;
+}
+#modal_indicator{
+    color: white;
 }

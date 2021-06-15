@@ -5,6 +5,7 @@ from css_generation import css_generation;
 
 File = open("jupyter_path.txt", "r");
 path = File.read()[:-1]; ## drop the /n in the file
+File.close();
 print("Your jupyter config dir is %s"%path);
 
 
