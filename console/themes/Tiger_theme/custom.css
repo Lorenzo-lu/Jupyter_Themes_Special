@@ -271,9 +271,9 @@ div#maintoolbar {
     background: transparent !important;
    }
 #maintoolbar-container{
-    width:100% !important;
-    text-align: center !important;
-    background: transparent !important;
+    width:100% ;
+    text-align: center ;
+    background: transparent ;
 }
 
 
