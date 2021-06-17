@@ -55,8 +55,7 @@ body > #header .header-bar {
 }
 .container { 
     width:60%;
-    background-color: transparent!important; 
-    background-color: rgba(245,145,0,1) !important;
+    background-color: rgba(245,145,0,1);
     padding: 0% 5%; 
     opacity: 1;
     color: black!important;
@@ -340,12 +339,11 @@ div.input_area {
     border-width: 1px;
     border-color: gray;
     border-radius: 0px;
-    background-color: whitesmoke;
+    /*background-color: whitesmoke;*/
 }
-
 div.cm-s-ipython.CodeMirror {
     font-family: monospace, ubuntu mono, courier, monospace !important;   
-    background-color: transparent;
+    background-color: whitesmoke;
 }
 /*.CodeMirror-scroll, .CodeMirror-sizer, .CodeMirror-gutter, .CodeMirror-gutters, .CodeMirror-linenumber*/
 /*the line number area*/
