@@ -147,7 +147,10 @@ color:white
 
 
 /***********************************/
-
+div#menubar-container, div#header-container{
+    width:100%;
+    padding-left:0px;
+}
 
 /*修改munubar*/
 div#menubar-container {

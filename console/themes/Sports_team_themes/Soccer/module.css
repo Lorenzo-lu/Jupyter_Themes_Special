@@ -227,7 +227,10 @@ span#login_widget > .button, #logout, #shutdown {
 }
 
 /***********************************/
-
+div#menubar-container, div#header-container{
+    width:100%;
+    padding-left:0px;
+}
 div#menubar-container {
     text-align: center;
     background-color: transparent;
