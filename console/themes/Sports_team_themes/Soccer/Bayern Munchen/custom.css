@@ -23,14 +23,22 @@
     height:max-content;
 }
 #jupyter-main-app {
-    position: rgb(0, 102, 178);
+    position: relative;
 }
 div#notebook{
-    min-height: max-content;
+    min-height: max-content;  
+    background-color:black;  
+}
+.notebook_app {
+    background-color: black;
 }
 body{
-    background-color: rgb(0, 102, 178); 
+    background-color: black; 
     font-family: arial;
+}
+
+#running .panel-group .panel .panel-heading{
+    background-color:rgb(0, 102, 178);
 }
 
 body > #header #header-container{
@@ -48,7 +56,7 @@ body > #header #header-container{
 
 body > #header {
     opacity: 1;
-    background-color: transparent;
+    background-color: rgb(0, 102, 178);
 }
 body > #header >div >div {
     background-color: transparent;     
@@ -75,18 +83,18 @@ body > #header .header-bar {
 } 
 
 .list_container {
-    border: 2px solid rgb(0, 102, 178);
+    border: 2px solid white;
 }
 .list_container > div {    
-    border-bottom: 2px solid rgb(0, 102, 178);
+    border-bottom: 1px solid white;
 }
 
 .list_header a {
-    color: black;
+    color: whitesmoke;
 }
 .list_header {
     background-color: rgb(0, 102, 178);
-    color: black;
+    color: whitesmoke;
 }
 .list_header > div .item_link,
 .list_item > div .item_link {
@@ -98,10 +106,10 @@ div.list_item a, div.list_item {
 }
 div.list_item:hover {
     background-color:rgb(0, 102, 178);  
-    color:black;    
+    color:whitesmoke;    
 }
 div.list_item:hover a {
-    color:black;      
+    color:whitesmoke;      
 }
 
 /*文件前的图标*/
@@ -136,19 +144,20 @@ div.list_item:hover a {
     font-weight: bold;
 }
 .breadcrumb > li + li:before{   
-    color:black;
+    color:whitesmoke;
 }
 
 div.list_item:hover >div>.notebook_icon:before, 
 div.list_item:hover >div>.folder_icon:before,
 div.list_item:hover >div>.file_icon:before
 {
-    color: black;  
+    color: whitesmoke;  
 }
 
 .btn-default {
-    color:black;
-    background-color: rgb(0, 102, 178);
+    color:white;
+    border-color: whitesmoke;
+    background-color: black;
     font-weight:bold;
 }
 .nav-tabs {
@@ -156,9 +165,9 @@ div.list_item:hover >div>.file_icon:before
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, 
 .nav-tabs > li.active > a:focus{
-    color:black;
+    color:whitesmoke;
     background-color: rgb(0, 102, 178);
-    border: 2px solid black;
+    border: 2px solid white;
     border-bottom-color: transparent;
 }
 .navbar-default .navbar-nav > .open > a, 
@@ -171,9 +180,9 @@ div.list_item:hover >div>.file_icon:before
     color:rgb(220, 5, 45);
 }
 span#login_widget > .button, #logout, #shutdown {
-    color: black;
+    color: whitesmoke;
     background-color: rgb(0, 102, 178);
-    border: 2px solid black;
+    border: 2px solid white;
     margin-left: 10px;
     font-weight: bold;
 }
@@ -182,36 +191,36 @@ span#login_widget > .button, #logout, #shutdown {
 }
 .dropdown-menu {
     background-color: rgb(0, 102, 178);
-    border: 3px solid rgb(220, 5, 45);
+    border: 3px solid whitesmoke;
     border-top: 0px;
 }
 .dropdown-menu > li > a{
     font-weight: bold;
-    color:black;
+    color:whitesmoke;
 }
 .dropdown-submenu > a:after {
-    color:black;
+    color:whitesmoke;
 }
 #new-menu .dropdown-header{
-    color:rgb(220, 5, 45);
+    color:white;
     font-weight: bold;
 }
 .kb{
-    color:black;
+    color:whitesmoke;
 }
 .kb kbd {
     white-space: nowrap;
-    color: black;
+    color: whitesmoke;
     font-weight: bold;
 }
 .dropdown-menu > li:hover >a> .kb,.dropdown-menu > li:hover >a> .kb kbd{
     color: white;  
 }
 .item_icon{
-    color:black;
+    color:whitesmoke;
 }
 .dropdown-menu > li > a > *:before{
- color:black;
+ color:whitesmoke;
 }
 .dropdown-menu > li:hover > a > *:before{
     color:white;
@@ -232,21 +241,21 @@ width:100% ;
     text-align: center;
     background-color: transparent;
     width:100%;
-    color: black;
+    color: whitesmoke;
     border-width:0pt;
     opacity: 1;
 }
 div.navbar-text,.navbar-text,
 .navbar-text.indicator_area,
 p.navbar-text.indicator_area,#kernel_indicator {
-    color: black;
+    color: whitesmoke;
     font-weight: bold;
 }
 .navbar-default {    
-    color: black;
+    color: whitesmoke;
 }
 .navbar-default .navbar-nav > li > a {
-    color: black;
+    color: whitesmoke;
     font-weight: bold;
 }
 div#maintoolbar {
@@ -262,9 +271,9 @@ div#maintoolbar {
  vertical-align: middle;
  display: inline;
  font-size: 92%;
-
  background-color: rgb(220, 5, 45);
  color: white;
+ border-width: 0px;
 }
 
 #notebook-container {
@@ -288,7 +297,8 @@ div.cell.selected, div.cell.selected.jupyter-soft-selected {
     box-shadow: 5px 5px 5px -3px black;
 }
 .edit_mode div.cell.selected > div.input > div.prompt_container >div.prompt{
-    color: rgb(220, 5, 45);
+    /*color: red;*/
+    font-weight: bold;;
 }
 
 /*coding area*/
@@ -324,7 +334,7 @@ div.prompt,.prompt {
 }
 
 .cm-s-ipython span.cm-keyword {
-    color: rgb(220, 5, 45);
+    /*color: rgb(220, 5, 45);*/
     font-weight: bold;
 }
 
@@ -350,4 +360,26 @@ div.inner_cell{
 
 div.prompt,.prompt{
 font-size:11px;
+}
+
+.nbextensions-configurator-container{
+    width:100%;
+    background-color: #EEE;
+    color:black;
+}
+.nav-pills > li > *{
+    color:black;
+}
+.nav > li > *:hover, .nav > li > *:focus{
+    color:black;
+}
+
+#running .panel-group .panel .panel-body .list_container{
+    background-color:rgb(220, 5, 45);
+}
+#running .panel-group .panel .panel-body .list_container:hover{
+    color:white;
+}
+#modal_indicator{
+    color: white;
 }

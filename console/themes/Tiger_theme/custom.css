@@ -13,7 +13,7 @@ div#notebook{
 }
 body{
     background-color: black; 
-    font-family: arial;
+    font-family: helvetica, arial;
 }
 
 body > #header #header-container{
