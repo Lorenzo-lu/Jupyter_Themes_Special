@@ -2,8 +2,8 @@ import os;
 import shutil;
 def css_generation(PATH, theme, markdown_size, markdown_line_height,
                    code_size, code_line_height):
-
     # theme will be the path of theme from a dictionary in this version
+    
     code_path = os.getcwd();
     theme = 'default' if not theme else theme;
     markdown_size = 'none' if not markdown_size else markdown_size;
