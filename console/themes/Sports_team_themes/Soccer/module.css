@@ -342,7 +342,7 @@ div.prompt,.prompt {
 }
 
 .cm-s-ipython span.cm-builtin {
-    color:color1;    /*builtin的print等函数的颜色  E85C48   a6e22e*/
+    color: orange;    /*builtin的print等函数的颜色  E85C48   a6e22e*/
 }
 
 .cm-s-ipython span.cm-number {
