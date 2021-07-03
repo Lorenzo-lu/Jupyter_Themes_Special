@@ -14,13 +14,14 @@ theme_path = {
     'Bayern': 'Sports_team_themes/Soccer/Bayern Munchen',
     'Dortmund':'Sports_team_themes/Soccer/Dortmund',
     'Real Madrid':'Sports_team_themes/Soccer/Real Madrid',
+    'Barcelona':'Sports_team_themes/Soccer/Barcelona',
     };
 
 
 theme = 'Tiger';
 #theme = 'default';
 #theme = 'Cosmo_theme';
-theme = 'Real Madrid';
+theme = 'Barcelona';
 code_size = '11px';                 
 code_line_height = '140%';
 markdown_size = '13px';
