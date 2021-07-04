@@ -15,13 +15,14 @@ theme_path = {
     'Dortmund':'Sports_team_themes/Soccer/Dortmund',
     'Real Madrid':'Sports_team_themes/Soccer/Real Madrid',
     'Barcelona':'Sports_team_themes/Soccer/Barcelona',
+    'AC Milan': 'Sports_team_themes/Soccer/AC Milan',
     };
 
 
 theme = 'Tiger';
 #theme = 'default';
 #theme = 'Cosmo_theme';
-theme = 'Barcelona';
+theme = 'AC Milan';
 code_size = '11px';                 
 code_line_height = '140%';
 markdown_size = '13px';
