@@ -23,20 +23,6 @@ def render_style(theme, code_size, code_line_height, markdown_size, markdown_lin
 
     print("Your jupyter config dir is %s"%path);
     
-    cur_dir = os.getcwd();
-    if theme=='keep':
-        os.chdir(path);
-        try:
-            FILE = open('./custom/current_theme.txt','r', encoding="utf8");
-            theme = FILE.read();
-            FILE.close();
-        except:
-            theme = 'default';
-            print('Set as default theme');
-    os.chdir(cur_dir);
-        
-    
-    
     theme_path = {
         'default': 'null',
         'Tiger': 'Tiger_theme',
@@ -64,7 +50,22 @@ def render_style(theme, code_size, code_line_height, markdown_size, markdown_lin
 
     # generating the jupyter style:
     # if you see 'Done!', refresh your jupyter
-    css_generation(path, theme, theme_path[theme], markdown_size, markdown_line_height,
+    theme_dir = 'keep' if theme not in theme_path else theme_path[theme];
+
+    cur_dir = os.getcwd();
+    if theme=='keep':
+        os.chdir(path);
+        try:
+            FILE = open('./custom/current_theme.txt','r', encoding="utf8");
+            theme = FILE.read();
+            FILE.close();
+        except:
+            theme = 'default';
+            print('Set as default theme');
+    os.chdir(cur_dir);
+
+    
+    css_generation(path, theme, theme_dir, markdown_size, markdown_line_height,
          code_size, code_line_height);
     
     if '__pycache__' in os.listdir():
