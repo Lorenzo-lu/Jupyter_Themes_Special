@@ -67,6 +67,9 @@ body > #header .header-bar {
     height:5px;
     background: color2; /*标题下的线*/
 }
+.terminal-app #terminado-container {
+    padding: 0% 0%;
+}
 .container { 
     width:60%;    
     background-color: color1;
@@ -155,9 +158,9 @@ div.list_item:hover >div>.file_icon:before
 }
 
 .btn-default {
-    color:white;
+    color:color4;
     border-color: color4;
-    background-color: black;
+    background-color: color2;
     font-weight:bold;
 }
 .nav-tabs {
@@ -198,12 +201,18 @@ span#login_widget > .button, #logout, #shutdown {
     font-weight: bold;
     color:color4;
 }
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+    color: color3;
+    text-decoration: none;
+    background-color: color1;
+}
 .dropdown-submenu > a:after {
     color:color4;
 }
 #new-menu .dropdown-header{
-    color:color3;
+    color:color4;
     font-weight: bold;
+    border-bottom:1px solid color4;
 }
 .kb{
     color:color4;
@@ -224,6 +233,9 @@ span#login_widget > .button, #logout, #shutdown {
 }
 .dropdown-menu > li:hover > a > *:before{
     color:color3;
+}
+.dropdown-menu .divider{
+    background-color: color4;
 }
 
 /***********************************/

@@ -53,6 +53,9 @@ body > #header .header-bar {
     right: 2%;
     bottom: 1%;
 }
+.terminal-app #terminado-container {
+    padding: 0% 0%;
+}
 .container { 
     width:60%;
     background-color: rgba(245,145,0,1);

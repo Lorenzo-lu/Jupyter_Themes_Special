@@ -38,7 +38,7 @@ body{
 }
 
 #running .panel-group .panel .panel-heading{
-    background-color:white;
+    background-color:rgb(219, 161, 17);
 }
 
 body > #header #header-container{
@@ -56,7 +56,7 @@ body > #header #header-container{
 
 body > #header {
     opacity: 1;
-    background-color: white;
+    background-color: rgb(219, 161, 17);
 }
 body > #header >div >div {
     background-color: transparent;     
@@ -65,39 +65,39 @@ body > #header .header-bar {
     width: 100%;
     margin: 0% 0%;;
     height:5px;
-    background: white; /*标题下的线*/
+    background: rgb(219, 161, 17); /*标题下的线*/
 }
 .terminal-app #terminado-container {
     padding: 0% 0%;
 }
 .container { 
     width:60%;    
-    background-color: rgb(0, 82, 159);
+    background-color: rgb(3, 70, 148);
     padding: 0% 5%; 
     opacity: 1;
-    color: rgb(254, 190, 16);
+    color: rgb(219, 161, 17);
     font-weight: bold;
     min-height: 100%;
 }
 .container a {
-    color: rgb(254, 190, 16);
+    color: rgb(219, 161, 17);
     font-weight: bold;
     border: none;
 } 
 
 .list_container {
-    border: 2px solid rgb(254, 190, 16);
+    border: 2px solid rgb(219, 161, 17);
 }
 .list_container > div {    
-    border-bottom: 1px solid rgb(254, 190, 16);
+    border-bottom: 1px solid rgb(219, 161, 17);
 }
 
 .list_header a {
-    color: rgb(238, 50, 78);
+    color: rgb(3, 70, 148);
 }
 .list_header {
-    background-color: white;
-    color: rgb(238, 50, 78);
+    background-color: rgb(219, 161, 17);
+    color: rgb(3, 70, 148);
 }
 .list_header > div .item_link,
 .list_item > div .item_link {
@@ -105,40 +105,40 @@ body > #header .header-bar {
     vertical-align: middle;
 }
 div.list_item a, div.list_item {
-    color: rgb(254, 190, 16);
+    color: rgb(219, 161, 17);
 }
 div.list_item:hover {
-    background-color:white;  
-    color:rgb(238, 50, 78);    
+    background-color:rgb(219, 161, 17);  
+    color:rgb(3, 70, 148);    
 }
 div.list_item:hover a {
-    color:rgb(238, 50, 78);      
+    color:rgb(3, 70, 148);      
 }
 
 /*文件前的图标*/
 .notebook_icon:before {
-    color: rgb(254, 190, 16);
+    color: rgb(219, 161, 17);
     font-weight: bold;
     content: "\f02d";
     vertical-align: middle;    
 }
 .running_notebook_icon:before {
-    color: rgb(254, 190, 16);
+    color: rgb(219, 161, 17);
     font-weight: bold;
     content: "\f040" ;
     vertical-align: middle;
 }
 .item_buttons .running-indicator {
-    color:rgb(254, 190, 16);
+    color:rgb(219, 161, 17);
 }
 .file_icon:before{
-    color:rgb(254, 190, 16);
+    color:rgb(219, 161, 17);
     font-weight: bold;
     vertical-align:middle;
     content: "\f0c5";
 }
 .folder_icon:before{
-    color: rgb(254, 190, 16);
+    color: rgb(219, 161, 17);
     font-weight: bold;
     vertical-align:middle;
 }
@@ -147,45 +147,45 @@ div.list_item:hover a {
     font-weight: bold;
 }
 .breadcrumb > li + li:before{   
-    color:rgb(238, 50, 78);
+    color:rgb(3, 70, 148);
 }
 
 div.list_item:hover >div>.notebook_icon:before, 
 div.list_item:hover >div>.folder_icon:before,
 div.list_item:hover >div>.file_icon:before
 {
-    color: rgb(238, 50, 78);  
+    color: rgb(3, 70, 148);  
 }
 
 .btn-default {
-    color:rgb(238, 50, 78);
-    border-color: rgb(238, 50, 78);
-    background-color: white;
+    color:rgb(3, 70, 148);
+    border-color: rgb(3, 70, 148);
+    background-color: rgb(219, 161, 17);
     font-weight:bold;
 }
 .nav-tabs {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgb(219, 161, 17);
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, 
 .nav-tabs > li.active > a:focus{
-    color:rgb(238, 50, 78);
-    background-color: white;
-    border: 2px solid rgb(254, 190, 16);
+    color:rgb(3, 70, 148);
+    background-color: rgb(219, 161, 17);
+    border: 2px solid rgb(219, 161, 17);
     border-bottom-color: transparent;
 }
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:hover, 
 .navbar-default .navbar-nav > .open > a:focus {
-    color: rgb(254, 190, 16);
-    background-color: rgb(0, 82, 159);
+    color: rgb(219, 161, 17);
+    background-color: rgb(3, 70, 148);
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
-    color:rgb(0, 82, 159);
+    color:rgb(3, 70, 148);
 }
 span#login_widget > .button, #logout, #shutdown {
-    color: rgb(238, 50, 78);
-    background-color: white;
-    border: 2px solid rgb(254, 190, 16);
+    color: rgb(3, 70, 148);
+    background-color: rgb(219, 161, 17);
+    border: 2px solid rgb(219, 161, 17);
     margin-left: 10px;
     font-weight: bold;
 }
@@ -193,49 +193,49 @@ span#login_widget > .button, #logout, #shutdown {
     font-weight: bold;
 }
 .dropdown-menu {
-    background-color: white;
-    border: 3px solid rgb(238, 50, 78);
+    background-color: rgb(219, 161, 17);
+    border: 3px solid rgb(3, 70, 148);
     border-top: 0px;
 }
 .dropdown-menu > li > a{
     font-weight: bold;
-    color:rgb(238, 50, 78);
+    color:rgb(3, 70, 148);
 }
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
-    color: rgb(254, 190, 16);
+    color: rgb(219, 161, 17);
     text-decoration: none;
-    background-color: rgb(0, 82, 159);
+    background-color: rgb(3, 70, 148);
 }
 .dropdown-submenu > a:after {
-    color:rgb(238, 50, 78);
+    color:rgb(3, 70, 148);
 }
 #new-menu .dropdown-header{
-    color:rgb(238, 50, 78);
+    color:rgb(3, 70, 148);
     font-weight: bold;
-    border-bottom:1px solid rgb(238, 50, 78);
+    border-bottom:1px solid rgb(3, 70, 148);
 }
 .kb{
-    color:rgb(238, 50, 78);
+    color:rgb(3, 70, 148);
 }
 .kb kbd {
     white-space: nowrap;
-    color: rgb(238, 50, 78);
+    color: rgb(3, 70, 148);
     font-weight: bold;
 }
 .dropdown-menu > li:hover >a> .kb,.dropdown-menu > li:hover >a> .kb kbd{
-    color: rgb(254, 190, 16);  
+    color: rgb(219, 161, 17);  
 }
 .item_icon{
-    color:rgb(238, 50, 78);
+    color:rgb(3, 70, 148);
 }
 .dropdown-menu > li > a > *:before{
- color:rgb(238, 50, 78);
+ color:rgb(3, 70, 148);
 }
 .dropdown-menu > li:hover > a > *:before{
-    color:rgb(254, 190, 16);
+    color:rgb(219, 161, 17);
 }
 .dropdown-menu .divider{
-    background-color: rgb(238, 50, 78);
+    background-color: rgb(3, 70, 148);
 }
 
 /***********************************/
@@ -256,21 +256,21 @@ width:100% ;
     text-align: center;
     background-color: transparent;
     width:100%;
-    color: rgb(238, 50, 78);
+    color: rgb(3, 70, 148);
     border-width:0pt;
     opacity: 1;
 }
 div.navbar-text,.navbar-text,
 .navbar-text.indicator_area,
 p.navbar-text.indicator_area,#kernel_indicator {
-    color: rgb(238, 50, 78);
+    color: rgb(3, 70, 148);
     font-weight: bold;
 }
 .navbar-default {    
-    color: rgb(238, 50, 78);
+    color: rgb(3, 70, 148);
 }
 .navbar-default .navbar-nav > li > a {
-    color: rgb(238, 50, 78);
+    color: rgb(3, 70, 148);
     font-weight: bold;
 }
 div#maintoolbar {
@@ -286,8 +286,8 @@ div#maintoolbar {
  vertical-align: middle;
  display: inline;
  font-size: 92%;
- background-color: rgb(0, 82, 159);
- color: rgb(254, 190, 16);
+ background-color: rgb(3, 70, 148);
+ color: rgb(219, 161, 17);
  border-width: 0px;
 }
 
@@ -349,7 +349,7 @@ div.prompt,.prompt {
 }
 
 .cm-s-ipython span.cm-keyword {
-    /*color: rgb(0, 82, 159);*/
+    /*color: rgb(3, 70, 148);*/
     font-weight: bold;
 }
 
@@ -390,11 +390,11 @@ font-size:11px;
 }
 
 #running .panel-group .panel .panel-body .list_container{
-    background-color:rgb(0, 82, 159);
+    background-color:rgb(3, 70, 148);
 }
 #running .panel-group .panel .panel-body .list_container:hover{
-    color:rgb(254, 190, 16);
+    color:rgb(219, 161, 17);
 }
 #modal_indicator{
-    color: rgb(254, 190, 16);
+    color: rgb(219, 161, 17);
 }

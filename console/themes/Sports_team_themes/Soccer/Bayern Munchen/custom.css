@@ -67,6 +67,9 @@ body > #header .header-bar {
     height:5px;
     background: rgb(0,102,178); /*标题下的线*/
 }
+.terminal-app #terminado-container {
+    padding: 0% 0%;
+}
 .container { 
     width:60%;    
     background-color: rgb(220,5,45);
@@ -90,11 +93,11 @@ body > #header .header-bar {
 }
 
 .list_header a {
-    color: whitesmoke;
+    color: white;
 }
 .list_header {
     background-color: rgb(0,102,178);
-    color: whitesmoke;
+    color: white;
 }
 .list_header > div .item_link,
 .list_item > div .item_link {
@@ -106,10 +109,10 @@ div.list_item a, div.list_item {
 }
 div.list_item:hover {
     background-color:rgb(0,102,178);  
-    color:whitesmoke;    
+    color:white;    
 }
 div.list_item:hover a {
-    color:whitesmoke;      
+    color:white;      
 }
 
 /*文件前的图标*/
@@ -144,20 +147,20 @@ div.list_item:hover a {
     font-weight: bold;
 }
 .breadcrumb > li + li:before{   
-    color:whitesmoke;
+    color:white;
 }
 
 div.list_item:hover >div>.notebook_icon:before, 
 div.list_item:hover >div>.folder_icon:before,
 div.list_item:hover >div>.file_icon:before
 {
-    color: whitesmoke;  
+    color: white;  
 }
 
 .btn-default {
     color:white;
-    border-color: whitesmoke;
-    background-color: black;
+    border-color: white;
+    background-color: rgb(0,102,178);
     font-weight:bold;
 }
 .nav-tabs {
@@ -165,7 +168,7 @@ div.list_item:hover >div>.file_icon:before
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, 
 .nav-tabs > li.active > a:focus{
-    color:whitesmoke;
+    color:white;
     background-color: rgb(0,102,178);
     border: 2px solid white;
     border-bottom-color: transparent;
@@ -180,7 +183,7 @@ div.list_item:hover >div>.file_icon:before
     color:rgb(220,5,45);
 }
 span#login_widget > .button, #logout, #shutdown {
-    color: whitesmoke;
+    color: white;
     background-color: rgb(0,102,178);
     border: 2px solid white;
     margin-left: 10px;
@@ -191,39 +194,48 @@ span#login_widget > .button, #logout, #shutdown {
 }
 .dropdown-menu {
     background-color: rgb(0,102,178);
-    border: 3px solid whitesmoke;
+    border: 3px solid white;
     border-top: 0px;
 }
 .dropdown-menu > li > a{
     font-weight: bold;
-    color:whitesmoke;
+    color:white;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+    color: white;
+    text-decoration: none;
+    background-color: rgb(220,5,45);
 }
 .dropdown-submenu > a:after {
-    color:whitesmoke;
+    color:white;
 }
 #new-menu .dropdown-header{
     color:white;
     font-weight: bold;
+    border-bottom:1px solid white;
 }
 .kb{
-    color:whitesmoke;
+    color:white;
 }
 .kb kbd {
     white-space: nowrap;
-    color: whitesmoke;
+    color: white;
     font-weight: bold;
 }
 .dropdown-menu > li:hover >a> .kb,.dropdown-menu > li:hover >a> .kb kbd{
     color: white;  
 }
 .item_icon{
-    color:whitesmoke;
+    color:white;
 }
 .dropdown-menu > li > a > *:before{
- color:whitesmoke;
+ color:white;
 }
 .dropdown-menu > li:hover > a > *:before{
     color:white;
+}
+.dropdown-menu .divider{
+    background-color: white;
 }
 
 /***********************************/
@@ -244,21 +256,21 @@ width:100% ;
     text-align: center;
     background-color: transparent;
     width:100%;
-    color: whitesmoke;
+    color: white;
     border-width:0pt;
     opacity: 1;
 }
 div.navbar-text,.navbar-text,
 .navbar-text.indicator_area,
 p.navbar-text.indicator_area,#kernel_indicator {
-    color: whitesmoke;
+    color: white;
     font-weight: bold;
 }
 .navbar-default {    
-    color: whitesmoke;
+    color: white;
 }
 .navbar-default .navbar-nav > li > a {
-    color: whitesmoke;
+    color: white;
     font-weight: bold;
 }
 div#maintoolbar {

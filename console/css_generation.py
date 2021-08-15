@@ -1,7 +1,8 @@
 import os;
 import shutil;
-def css_generation(PATH, theme, markdown_size, markdown_line_height,
+def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
                    code_size, code_line_height):
+    print('You are choosing theme:', theme_key)
     # theme will be the path of theme from a dictionary in this version
     
     code_path = os.getcwd();
@@ -25,16 +26,16 @@ def css_generation(PATH, theme, markdown_size, markdown_line_height,
                 shutil.copytree(src, tgt);
             except:
                 shutil.copy(src, tgt);
-        #file = open('custom.css', 'r');
+        #file = open('custom.css', 'r', encoding="utf8");
         #css = file.read();
     except:
         os.chdir(PATH);
-        print('Wrong theme path');
-        return False;
+        print('Use default jupyter theme');
+        #return False;
 
     os.chdir('%s/themes/custom'%(code_path));
     if 'custom.css' in os.listdir():
-        file = open('custom.css', 'r');
+        file = open('custom.css', 'r', encoding="utf8");
         css = file.read(); 
         file.close();
         os.remove('custom.css');
@@ -48,13 +49,17 @@ def css_generation(PATH, theme, markdown_size, markdown_line_height,
     css = css + 'div.prompt,.prompt{\nfont-size:%s;\n\
         }\n\n'%(code_size);
     
-    file = open('custom.css', 'w+');
+    file = open('custom.css', 'w+', encoding="utf8");
     file.write(css);
+    file.close();
+    ## keep the theme name: if you only want to change font size, you can get info what theme you are using, and the variable will be set as current one
+    file = open('current_theme.txt', 'w+', encoding="utf8");
+    file.write(theme_key);
     file.close();
     new_css_loc = os.getcwd();
     
     os.chdir(PATH);
-    if 'custom' in os.listdir():
+    if 'custom' in os.listdir():            
         shutil.rmtree('custom');
 
     shutil.move(new_css_loc, '%s/custom'%PATH);

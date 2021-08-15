@@ -42,7 +42,9 @@ body > #header .header-bar {    /*这里有一根bar比较影响美观*/
     background: transparent; 
    }
 
-
+.terminal-app #terminado-container {
+    padding: 0% 0%;
+}
 .container { /*width: 80%!important;     */
     background-color: transparent!important; 
     /*padding: 0% 5%; /*让目录页不顶格*/
