@@ -41,9 +41,17 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
         os.remove('custom.css');
     else:
         css = '';
+
+    ## using KaTeX font
+    markdown_font = "KaTeX_Main";
+    css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/fonts/KaTeX_Main-Regular.woff2') format('woff');font-weight:normal;font-style:normal}"
+    css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/fonts/KaTeX_Main-Bold.woff2') format('woff');font-weight:bold;font-style:bold}"
+    css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/fonts/KaTeX_Main-Italic.woff2') format('woff');font-weight:normal;font-style:italic}"
+    css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/fonts/KaTeX_Main-BoldItalic.woff2') format('woff');font-weight:bold;font-style:italic}"
+    css = css + "\n.jp-RenderedHTMLCommon{font-family: %s!important}"%markdown_font; ## use !important to override
     
-    css = css + 'div.inner_cell{\nfont-size: %s;\n\
-        line-height: %s}\n\n'%(markdown_size, markdown_line_height);
+    css = css + '\ndiv.inner_cell{\nfont-size: %s;\n\
+        line-height: %s;\nfont-family:"%s";}\n\n'%(markdown_size, markdown_line_height, markdown_font);
     css = css + '.output pre, .CodeMirror-code{\nfont-size:%s;\n\
         line-height: %s}\n\n'%(code_size, code_line_height);
     css = css + 'div.prompt,.prompt{\nfont-size:%s;\n\
