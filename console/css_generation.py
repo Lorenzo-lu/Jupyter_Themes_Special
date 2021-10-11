@@ -52,6 +52,7 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
     css = css + "\n.jp-RenderedHTMLCommon h1, .jp-RenderedHTMLCommon h2,\
      .jp-RenderedHTMLCommon h3, .jp-RenderedHTMLCommon h4, \
      .jp-RenderedHTMLCommon h5, .jp-RenderedHTMLCommon h6{font-weight: bold!important}"; ## use !important to override
+
     
     css = css + '\ndiv.inner_cell{\nfont-size: %s;\n\
         line-height: %s;\nfont-family:"%s";}\n\n'%(markdown_size, markdown_line_height, markdown_font); 
@@ -60,8 +61,15 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
     css = css + 'div.prompt,.prompt{\nfont-size:%s;\n\
         }\n\n'%(code_size);
 
-    css = css + '\n.rendered_html pre, .rendered_html code{background-color:transparent;color:navy;font-size:%s}'%markdown_size;
-    css = css + '\n.jp-RenderedHTMLCommon :not(pre) > code{background-color:transparent!important;color:navy!important;font-size:%s!important}'%markdown_size;
+    markdown_code_size = markdown_size;
+    markdown_code_color = 'blue';
+    markdown_code_family = 'txtt_code';
+    css = css + '\n@font-face {font-family: "txtt_code"; src: url("https://fluorescenceexplorationlab.yizhoulu.repl.co/font/newtxtt.pfb.ttf");font-weight:normal;font-style:normal}';
+    
+    css = css + '\n.rendered_html pre, .rendered_html code {background-color:transparent;color:%s;font-size:%s ;\
+font-family:"%s", monospace}'%(markdown_code_color,markdown_code_size, markdown_code_family); ## for the jupyter notebook
+    css = css + '\n.jp-RenderedHTMLCommon :not(pre) > code,  .jp-RenderedHTMLCommon code{background-color:transparent!important;color:%s!important ;font-size:"%s"!important;\
+font-family:%s,monospace!important}'%(markdown_code_color, markdown_code_size, markdown_code_family); ## for the outputed html
     
     file = open('custom.css', 'w+', encoding="utf8");
     file.write(css);
