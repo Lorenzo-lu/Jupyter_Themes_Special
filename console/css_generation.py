@@ -59,6 +59,9 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
         line-height: %s}\n\n'%(code_size, code_line_height);
     css = css + 'div.prompt,.prompt{\nfont-size:%s;\n\
         }\n\n'%(code_size);
+
+    css = css + '\n.rendered_html pre, .rendered_html code{background-color:transparent;color:navy;font-size:%s}'%markdown_size;
+    css = css + '\n.jp-RenderedHTMLCommon :not(pre) > code{background-color:transparent!important;color:navy!important;font-size:%s!important}'%markdown_size;
     
     file = open('custom.css', 'w+', encoding="utf8");
     file.write(css);
