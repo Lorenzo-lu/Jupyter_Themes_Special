@@ -30,7 +30,7 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
         #css = file.read();
     except:
         os.chdir(PATH);
-        print('Use default jupyter theme');
+        print('No valid theme chosen.\nUse default jupyter theme');
         #return False;
 
     os.chdir('%s/themes/custom'%(code_path));
@@ -44,6 +44,7 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
 
     ## using KaTeX font
     markdown_font = "KaTeX_Main";
+    code_font = "consolas_code"
     css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/fonts/KaTeX_Main-Regular.woff2') format('woff');font-weight:normal;font-style:normal}"
     css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/fonts/KaTeX_Main-Bold.woff2') format('woff');font-weight:bold;font-style:bold}"
     css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/fonts/KaTeX_Main-Italic.woff2') format('woff');font-weight:normal;font-style:italic}"
@@ -53,18 +54,24 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
      .jp-RenderedHTMLCommon h3, .jp-RenderedHTMLCommon h4, \
      .jp-RenderedHTMLCommon h5, .jp-RenderedHTMLCommon h6{font-weight: bold!important}"; ## use !important to override
 
+    css = css + '\n@font-face {font-family: "txtt_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/newtxtt.pfb.ttf");font-weight:normal;font-style:normal}';
+    css = css + '\n@font-face {font-family: "IBMPlex_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/consolasMono-Regular.ttf");font-weight:normal;font-style:normal}';
+    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/CONSOLA.TTF");font-weight:normal;font-style:normal}';
+    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/CONSOLAB.TTF");font-weight:bold;font-style:normal}';
+    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/consolai.ttf");font-weight:normal;font-style:italic}';
+    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/consolaz.ttf");font-weight:bold;font-style:italic}';
     
     css = css + '\ndiv.inner_cell{\nfont-size: %s;\n\
         line-height: %s;\nfont-family:"%s";}\n\n'%(markdown_size, markdown_line_height, markdown_font); 
     css = css + '.output pre, .CodeMirror-code{\nfont-size:%s;\n\
-        line-height: %s}\n\n'%(code_size, code_line_height);
-    css = css + 'div.prompt,.prompt{\nfont-size:%s;\n\
-        }\n\n'%(code_size);
+        line-height: %s;\nfont-family:"%s", monospace;}\n\n'%(code_size, code_line_height, code_font);
+    #css = css + 'div.prompt,.prompt{\nfont-size:%s;\n\
+    #    }\n\n'%(code_size);
 
     markdown_code_size = markdown_size;
     markdown_code_color = 'blue';
-    markdown_code_family = 'txtt_code';
-    css = css + '\n@font-face {font-family: "txtt_code"; src: url("https://fluorescenceexplorationlab.yizhoulu.repl.co/font/newtxtt.pfb.ttf");font-weight:normal;font-style:normal}';
+    markdown_code_family = 'consolas_code';
+    
     
     css = css + '\n.rendered_html pre, .rendered_html code {background-color:transparent;color:%s;font-size:%s ;\
 font-family:"%s", monospace}'%(markdown_code_color,markdown_code_size, markdown_code_family); ## for the jupyter notebook

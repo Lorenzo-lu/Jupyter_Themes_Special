@@ -50,9 +50,9 @@ def render_style(theme, code_size, code_line_height, markdown_size, markdown_lin
 
     # generating the jupyter style:
     # if you see 'Done!', refresh your jupyter
-    theme_dir = 'keep' if theme not in theme_path else theme_path[theme];
-
-    cur_dir = os.getcwd();
+    if theme not in theme_path:
+        theme = 'keep';     
+    cur_dir = os.getcwd();  ## cd the .jupyter folder
     if theme=='keep':
         os.chdir(path);
         try:
@@ -63,7 +63,7 @@ def render_style(theme, code_size, code_line_height, markdown_size, markdown_lin
             theme = 'default';
             print('Set as default theme');
     os.chdir(cur_dir);
-
+    theme_dir = theme_path[theme];
     
     css_generation(path, theme, theme_dir, markdown_size, markdown_line_height,
          code_size, code_line_height);
@@ -83,9 +83,9 @@ if __name__ == '__main__':
     
     parser = argparse.ArgumentParser(description='Render your jupyter style');
     parser.add_argument('-t','--theme', type=str, default='keep', help='Choose a style');
-    parser.add_argument('-cs','--code-size', type=str, default='11px', help='choose the size of codes font');
+    parser.add_argument('-cs','--code-size', type=str, default='12px', help='choose the size of codes font');
     parser.add_argument('-clh','--code-line-height', type=str, default='140%', help='choose the line height of each code line');
-    parser.add_argument('-ms','--markdown-size', type=str, default='13px', help='choose the size of markdown font');
+    parser.add_argument('-ms','--markdown-size', type=str, default='14px', help='choose the size of markdown font');
     parser.add_argument('-mlh','--markdown-line-height', type=str, default='150%', help='line height of each markdown line');
     
     
