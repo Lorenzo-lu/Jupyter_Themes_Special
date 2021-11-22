@@ -90,7 +90,7 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
 
     ## using KaTeX font
     markdown_font = "KaTeX_Main";
-    code_font = "consolas_code"
+    #code_font = "consolas_code"
     code_font = 'UbuntuMono_code';
     
     css = css + "\n.jp-RenderedHTMLCommon{font-family: %s!important}"%markdown_font; ## use !important to override
@@ -108,13 +108,15 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
 
     markdown_code_size = markdown_size;
     markdown_code_color = 'blue';
-    markdown_code_family = 'consolas_code';
+    #markdown_code_family = 'consolas_code';
+    markdown_code_family = code_font; 
     
     
     css = css + '\n.rendered_html pre, .rendered_html code {background-color:transparent;color:%s;font-size:%s ;\
 font-family:"%s", monospace}'%(markdown_code_color,markdown_code_size, markdown_code_family); ## for the jupyter notebook
     css = css + '\n.jp-RenderedHTMLCommon :not(pre) > code,  .jp-RenderedHTMLCommon code{background-color:transparent!important;color:%s!important ;font-size:"%s"!important;\
 font-family:%s,monospace!important}'%(markdown_code_color, markdown_code_size, markdown_code_family); ## for the outputed html
+    css = css + '\n pre {font-family:%s, monospace!important}'%code_font; 
     
     file = open('custom.css', 'w+', encoding="utf8");
     file.write(css);

@@ -35,6 +35,9 @@ If there is no `-t` argument, it will keep the most recent style
 * `-clh`: code line height. By default, it is `140%`
 * `-ms`: markdown size. By default, it is `13px`
 * `-mlh`: markdown line height. By default, it is `150%`
+* `-rs`: reset style. If set as `true`, all the missing arguments will be the default.
+
+For example, you firstly tried `python3 console.py -t Barcelona -cs 14px` and you want to increase the code font size, just run `python3 console.py -cs 15px` and don't have to worry about the other stuff. But if you run `python3 console.py -rs true -cs 15px`, your code size will be larger, but your theme will be reset to default.
 
 
 
