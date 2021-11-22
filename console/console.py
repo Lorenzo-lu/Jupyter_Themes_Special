@@ -7,8 +7,10 @@ import subprocess as sp
 import shutil
 import os
 import argparse
+import json
 
-def render_style(theme, code_size, code_line_height, markdown_size, markdown_line_height):
+def render_style(theme, code_size, code_line_height, markdown_size, markdown_line_height, reset_style):
+
     '''
     pybash('jupyter --config > jupyter_path.txt')
 
@@ -33,7 +35,7 @@ def render_style(theme, code_size, code_line_height, markdown_size, markdown_lin
         'Barcelona':'Sports_team_themes/Soccer/Barcelona',
         'AC_Milan': 'Sports_team_themes/Soccer/AC Milan',
         'Inter_Milan': 'Sports_team_themes/Soccer/Inter Milan',
-        };
+        }; 
     
     
     '''
@@ -50,8 +52,11 @@ def render_style(theme, code_size, code_line_height, markdown_size, markdown_lin
 
     # generating the jupyter style:
     # if you see 'Done!', refresh your jupyter
+    
     if theme not in theme_path:
-        theme = 'keep';     
+        theme = 'default';     
+
+    ''' # remove this part; use json instead
     cur_dir = os.getcwd();  ## cd the .jupyter folder
     if theme=='keep':
         os.chdir(path);
@@ -63,6 +68,7 @@ def render_style(theme, code_size, code_line_height, markdown_size, markdown_lin
             theme = 'default';
             print('Set as default theme');
     os.chdir(cur_dir);
+    '''
     theme_dir = theme_path[theme];
     
     css_generation(path, theme, theme_dir, markdown_size, markdown_line_height,
@@ -82,15 +88,56 @@ if __name__ == '__main__':
     
     
     parser = argparse.ArgumentParser(description='Render your jupyter style');
-    parser.add_argument('-t','--theme', type=str, default='keep', help='Choose a style');
-    parser.add_argument('-cs','--code-size', type=str, default='12px', help='choose the size of codes font');
-    parser.add_argument('-clh','--code-line-height', type=str, default='140%', help='choose the line height of each code line');
-    parser.add_argument('-ms','--markdown-size', type=str, default='14px', help='choose the size of markdown font');
-    parser.add_argument('-mlh','--markdown-line-height', type=str, default='150%', help='line height of each markdown line');
+    parser.add_argument('-t','--theme', type=str, default='null', help='Choose a style');
+    parser.add_argument('-cs','--code-size', type=str, default='null', help='choose the size of codes font');
+    parser.add_argument('-clh','--code-line-height', type=str, default='null', help='choose the line height of each code line');
+    parser.add_argument('-ms','--markdown-size', type=str, default='null', help='choose the size of markdown font');
+    parser.add_argument('-mlh','--markdown-line-height', type=str, default='null', help='line height of each markdown line');
+    parser.add_argument('-rs','--reset-style', type=str, default='False', help='line height of each markdown line'); 
+
+    args_namespace = parser.parse_args(); 
+    parameters = vars(args_namespace);    ## - will be _ underscore in dict
+    cur_path = os.getcwd(); 
+    path = sp.getoutput('jupyter --config');  # jupyter path
+
+    os.chdir(path); ## go to .jupyter folder
+
+    defaults = {
+        'theme':'default',
+        'code_size':'14px',
+        'code_line_height':'140%',
+        'markdown_size':'16px',
+        'markdown_line_height':'140%',
+        'reset': False
+    }; 
+    filename = 'parameters.json'; 
+
+    if not os.path.exists(filename):        
+        with open(filename, 'w+') as fp:
+            json.dump(defaults, fp); 
+  
     
+    with open(filename, 'r') as fp:
+        last_editted = json.load(fp); 
     
-    args_namespace = parser.parse_args();
-    render_style(**vars(args_namespace))
+    if parameters['reset_style'].lower() == 'true':
+        print('Resetting...')
+        last_editted = defaults; 
+    
+    #print(parameters, last_editted)
+    for key in parameters:
+        if parameters[key] == 'null':
+            parameters[key] = last_editted[key]; 
+      
+    os.remove(filename); 
+    with open(filename, 'w+') as fp:
+        json.dump(parameters, fp); 
+
+    print('******Parameters******\n', parameters)
+
+    os.chdir(cur_path);  ##  go back to current folder (custom)
+    
+    render_style(**parameters); 
     
     
     

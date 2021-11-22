@@ -40,26 +40,64 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
         file.close();
         os.remove('custom.css');
     else:
-        css = '';
+        css = ''; 
 
-    ## using KaTeX font
-    markdown_font = "KaTeX_Main";
-    code_font = "consolas_code"
+    ## add online fonts
+    
+    '''
     css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/fonts/KaTeX_Main-Regular.woff2') format('woff');font-weight:normal;font-style:normal}"
     css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/fonts/KaTeX_Main-Bold.woff2') format('woff');font-weight:bold;font-style:bold}"
     css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/fonts/KaTeX_Main-Italic.woff2') format('woff');font-weight:normal;font-style:italic}"
     css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/fonts/KaTeX_Main-BoldItalic.woff2') format('woff');font-weight:bold;font-style:italic}"
+    '''
+
+    css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://myresources.yizhoulu.repl.co/fonts/KaTeX_Main-Regular.woff2') format('woff');font-weight:normal;font-style:normal}"
+    css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://myresources.yizhoulu.repl.co/fonts/KaTeX_Main-Bold.woff2') format('woff');font-weight:bold;font-style:bold}"
+    css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://myresources.yizhoulu.repl.co/fonts/KaTeX_Main-Italic.woff2') format('woff');font-weight:normal;font-style:italic}"
+    css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://myresources.yizhoulu.repl.co/fonts/KaTeX_Main-BoldItalic.woff2') format('woff');font-weight:bold;font-style:italic}"
+    
+    css = css + '\n@font-face {font-family: "txtt_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/newtxtt.pfb.ttf");font-weight:normal;font-style:normal}'; 
+    css = css + '\n@font-face {font-family: "IBMPlex_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/consolasMono-Regular.ttf");font-weight:normal;font-style:normal}'; 
+    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/CONSOLA.TTF");font-weight:normal;font-style:normal}';  
+    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/CONSOLAB.TTF");font-weight:bold;font-style:normal}'; 
+    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/consolai.ttf");font-weight:normal;font-style:italic}'; 
+    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/consolaz.ttf");font-weight:bold;font-style:italic}'; 
+
+    css = css + '\n@font-face {font-family: "DejaVuSansMono_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/DejaVuSansMono.ttf");font-weight:normal;font-style:normal}'; 
+    css = css + '\n@font-face {font-family: "DejaVuSansMono_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/DejaVuSansMono-Bold.ttf");font-weight:bold;font-style:normal}'; 
+    css = css + '\n@font-face {font-family: "DejaVuSansMono_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/DejaVuSansMono-Oblique.ttf");font-weight:normal;font-style:italic}'; 
+    css = css + '\n@font-face {font-family: "DejaVuSansMono_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/DejaVuSansMono-BoldOblique.ttf");font-weight:bold;font-style:italic}'; 
+
+    css = css + '\n@font-face {font-family: "UbuntuMono_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/UbuntuMono-Regular.ttf");font-weight:normal;font-style:normal}'; 
+    css = css + '\n@font-face {font-family: "UbuntuMono_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/UbuntuMono-Bold.ttf");font-weight:bold;font-style:normal}'; 
+    css = css + '\n@font-face {font-family: "UbuntuMono_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/UbuntuMono-Italic.ttf");font-weight:normal;font-style:italic}'; 
+    css = css + '\n@font-face {font-family: "UbuntuMono_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/UbuntuMono-BoldItalic.ttf");font-weight:bold;font-style:italic}'; 
+
+    #https://lorenzo-lu.github.io/
+    '''
+    css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://lorenzo-lu.github.io/misc/fonts/KaTeX_Main-Regular.tff');font-weight:normal;font-style:normal}"
+    css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://lorenzo-lu.github.io/misc/fonts/KaTeX_Main-Bold.tff');font-weight:bold;font-style:normal}"
+    css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://lorenzo-lu.github.io/misc/fonts/KaTeX_Main-Italic.tff');font-weight:normal;font-style:italic}"
+    css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://lorenzo-lu.github.io/misc/fonts/KaTeX_Main-BoldItalic.tff');font-weight:bold;font-style:italic}"
+
+    css = css + '\n@font-face {font-family: "txtt_code"; src: url("https://lorenzo-lu.github.io/misc/fonts/newtxtt.pfb.ttf");font-weight:normal;font-style:normal}'; 
+    css = css + '\n@font-face {font-family: "IBMPlex_code"; src: url("https://lorenzo-lu.github.io/misc/fonts/IBMPlexMono-Regular.ttf");font-weight:normal;font-style:normal}'; 
+    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://lorenzo-lu.github.io/misc/fonts/CONSOLA.TTF");font-weight:normal;font-style:normal}';  
+    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://lorenzo-lu.github.io/misc/fonts/CONSOLAB.TTF");font-weight:bold;font-style:normal}'; 
+    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://lorenzo-lu.github.io/misc/fonts/consolai.ttf");font-weight:normal;font-style:italic}'; 
+    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://lorenzo-lu.github.io/misc/fonts/consolaz.ttf");font-weight:bold;font-style:italic}'; 
+    '''
+
+    ## using KaTeX font
+    markdown_font = "KaTeX_Main";
+    code_font = "consolas_code"
+    code_font = 'UbuntuMono_code';
+    
     css = css + "\n.jp-RenderedHTMLCommon{font-family: %s!important}"%markdown_font; ## use !important to override
     css = css + "\n.jp-RenderedHTMLCommon h1, .jp-RenderedHTMLCommon h2,\
      .jp-RenderedHTMLCommon h3, .jp-RenderedHTMLCommon h4, \
      .jp-RenderedHTMLCommon h5, .jp-RenderedHTMLCommon h6{font-weight: bold!important}"; ## use !important to override
-
-    css = css + '\n@font-face {font-family: "txtt_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/newtxtt.pfb.ttf");font-weight:normal;font-style:normal}';
-    css = css + '\n@font-face {font-family: "IBMPlex_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/consolasMono-Regular.ttf");font-weight:normal;font-style:normal}';
-    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/CONSOLA.TTF");font-weight:normal;font-style:normal}';
-    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/CONSOLAB.TTF");font-weight:bold;font-style:normal}';
-    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/consolai.ttf");font-weight:normal;font-style:italic}';
-    css = css + '\n@font-face {font-family: "consolas_code"; src: url("https://myresources.yizhoulu.repl.co/fonts/consolaz.ttf");font-weight:bold;font-style:italic}';
+    
     
     css = css + '\ndiv.inner_cell{\nfont-size: %s;\n\
         line-height: %s;\nfont-family:"%s";}\n\n'%(markdown_size, markdown_line_height, markdown_font); 
