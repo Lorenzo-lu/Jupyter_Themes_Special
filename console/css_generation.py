@@ -89,18 +89,18 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
     '''
 
     ## using KaTeX font
-    markdown_font = "KaTeX_Main";
+    markdown_font = "KaTeX_Main"; 
     #code_font = "consolas_code"
-    code_font = 'UbuntuMono_code';
+    code_font = 'UbuntuMono_code'; 
     
-    css = css + "\n.jp-RenderedHTMLCommon{font-family: %s!important}"%markdown_font; ## use !important to override
+    css = css + "\n.jp-RenderedHTMLCommon{font-family: %s, sans-serif !important}"%markdown_font; ## use !important to override
     css = css + "\n.jp-RenderedHTMLCommon h1, .jp-RenderedHTMLCommon h2,\
      .jp-RenderedHTMLCommon h3, .jp-RenderedHTMLCommon h4, \
      .jp-RenderedHTMLCommon h5, .jp-RenderedHTMLCommon h6{font-weight: bold!important}"; ## use !important to override
     
     
     css = css + '\ndiv.inner_cell{\nfont-size: %s;\n\
-        line-height: %s;\nfont-family:"%s";}\n\n'%(markdown_size, markdown_line_height, markdown_font); 
+        line-height: %s;\nfont-family:"%s",sans-serif;}\n\n'%(markdown_size, markdown_line_height, markdown_font); 
     css = css + '.output pre, .CodeMirror-code{\nfont-size:%s;\n\
         line-height: %s;\nfont-family:"%s", monospace;}\n\n'%(code_size, code_line_height, code_font);
     #css = css + 'div.prompt,.prompt{\nfont-size:%s;\n\
@@ -111,7 +111,7 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
     #markdown_code_family = 'consolas_code';
     markdown_code_family = code_font; 
     
-    
+    ## for the verbatim in markdown
     css = css + '\n.rendered_html pre, .rendered_html code {background-color:transparent;color:%s;font-size:%s ;\
 font-family:"%s", monospace}'%(markdown_code_color,markdown_code_size, markdown_code_family); ## for the jupyter notebook
     css = css + '\n.jp-RenderedHTMLCommon :not(pre) > code,  .jp-RenderedHTMLCommon code{background-color:transparent!important;color:%s!important ;font-size:"%s"!important;\
