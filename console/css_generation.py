@@ -51,8 +51,8 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
     css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/fonts/KaTeX_Main-BoldItalic.woff2') format('woff');font-weight:bold;font-style:italic}"
     '''
 
-    css = css + '\n@font-face {font-family: LaTeX; src: url("https://myresources.yizhoulu.repl.co/fonts/mwa_cmr10.ttf");font-weight:normal;font-style:normal}'; 
-    css = css + '\n@font-face {font-family: LaTeX; src: url("https://myresources.yizhoulu.repl.co/fonts/mwa_cmls10.ttf");font-weight:normal;font-style:italic}'; 
+    css = css + '\n@font-face {font-family:LaTeX; src: url("https://myresources.yizhoulu.repl.co/fonts/mwa_cmr10.ttf");font-weight:normal;font-style:normal}'; 
+    css = css + '\n@font-face {font-family:LaTeX; src: url("https://myresources.yizhoulu.repl.co/fonts/mwa_cmls10.ttf");font-weight:normal;font-style:italic}'; 
 
     css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://myresources.yizhoulu.repl.co/fonts/KaTeX_Main-Regular.woff2') format('woff');font-weight:normal;font-style:normal}"
     css = css + "\n@font-face{font-family:KaTeX_Main; src:url('https://myresources.yizhoulu.repl.co/fonts/KaTeX_Main-Bold.woff2') format('woff');font-weight:bold;font-style:bold}"
@@ -92,7 +92,7 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
     '''
 
     ## using KaTeX font
-    markdown_font = "LaTeX, KaTeX_Main"; 
+    markdown_font = "LaTeX"; 
     #code_font = "consolas_code"
     code_font = 'UbuntuMono_code'; 
     
