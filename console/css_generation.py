@@ -92,7 +92,7 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
     '''
 
     ## using KaTeX font
-    markdown_font = "KaTeX-Main"; 
+    markdown_font = "KaTeX_Main"; 
     #code_font = "consolas_code"
     code_font = 'UbuntuMono_code'; 
     
