@@ -398,3 +398,14 @@ font-size:11px;
 #modal_indicator{
     color: color3;
 }
+
+
+/*colors on nbexten*/
+ul#ui-id-1{
+    color:black;
+    background:white;
+}
+a.btn.btn-default.input-group-btn{
+    color:black;
+    background:white;
+}

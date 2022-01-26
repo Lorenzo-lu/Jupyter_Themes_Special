@@ -327,3 +327,12 @@ color: Red; // very important
 .cm-s-ipython span.cm-property {
     //color: blue;      /*修改函数 f8f8f0  B4EB8B 5FB41F  6246F0 E9A374*/
 }
+
+ul#ui-id-1{
+    color:black;
+    background:white;
+}
+a.btn.btn-default.input-group-btn{
+    color:black;
+    background:white;
+}

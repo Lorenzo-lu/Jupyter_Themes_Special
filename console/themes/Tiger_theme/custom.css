@@ -384,3 +384,13 @@ div.prompt,.prompt {
 .cm-s-ipython span.cm-string {
     color:forestgreen;
 }
+
+/*colors on nbexten*/
+ul#ui-id-1{
+    color:black;
+    background:white;
+}
+a.btn.btn-default.input-group-btn{
+    color:black;
+    background:white;
+}
