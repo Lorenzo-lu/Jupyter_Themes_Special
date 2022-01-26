@@ -94,7 +94,8 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
     ## using KaTeX font
     markdown_font = "KaTeX_Main"; 
     #code_font = "consolas_code"
-    code_font = 'UbuntuMono_code'; 
+    #code_font = 'UbuntuMono_code'; 
+    code_font = ''
     
     css = css + "\n.jp-RenderedHTMLCommon{font-family: %s, sans-serif !important}"%markdown_font; ## use !important to override
     css = css + "\n.jp-RenderedHTMLCommon h1, .jp-RenderedHTMLCommon h2,\
