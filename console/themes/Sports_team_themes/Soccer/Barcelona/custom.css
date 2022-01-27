@@ -260,9 +260,11 @@ width:100% ;
     border-width:0pt;
     opacity: 1;
 }
+
 div.navbar-text,.navbar-text,
 .navbar-text.indicator_area,
-p.navbar-text.indicator_area,#kernel_indicator {
+p.navbar-text.indicator_area,#kernel_indicator, 
+#kernel_indicator .kernel_indicator_name{
     color: rgb(255, 237, 2);
     font-weight: bold;
 }

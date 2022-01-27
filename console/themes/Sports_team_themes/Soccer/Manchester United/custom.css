@@ -75,21 +75,21 @@ body > #header .header-bar {
     background-color: rgb(218, 41, 28);
     padding: 0% 5%; 
     opacity: 1;
-    color: rgb(251, 225, 34);
+    color: black;
     font-weight: bold;
     min-height: 100%;
 }
 .container a {
-    color: rgb(251, 225, 34);
+    color: black;
     font-weight: bold;
     border: none;
 } 
 
 .list_container {
-    border: 2px solid rgb(251, 225, 34);
+    border: 2px solid black;
 }
 .list_container > div {    
-    border-bottom: 1px solid rgb(251, 225, 34);
+    border-bottom: 1px solid black;
 }
 
 .list_header a {
@@ -105,7 +105,7 @@ body > #header .header-bar {
     vertical-align: middle;
 }
 div.list_item a, div.list_item {
-    color: rgb(251, 225, 34);
+    color: black;
 }
 div.list_item:hover {
     background-color:rgb(251, 225, 34);  
@@ -117,28 +117,28 @@ div.list_item:hover a {
 
 /*文件前的图标*/
 .notebook_icon:before {
-    color: rgb(251, 225, 34);
+    color: black;
     font-weight: bold;
     content: "\f02d";
     vertical-align: middle;    
 }
 .running_notebook_icon:before {
-    color: rgb(251, 225, 34);
+    color: black;
     font-weight: bold;
     content: "\f040" ;
     vertical-align: middle;
 }
 .item_buttons .running-indicator {
-    color:rgb(251, 225, 34);
+    color:black;
 }
 .file_icon:before{
-    color:rgb(251, 225, 34);
+    color:black;
     font-weight: bold;
     vertical-align:middle;
     content: "\f0c5";
 }
 .folder_icon:before{
-    color: rgb(251, 225, 34);
+    color: black;
     font-weight: bold;
     vertical-align:middle;
 }
@@ -170,13 +170,13 @@ div.list_item:hover >div>.file_icon:before
 .nav-tabs > li.active > a:focus{
     color:rgb(218, 41, 28);
     background-color: rgb(251, 225, 34);
-    border: 2px solid rgb(251, 225, 34);
+    border: 2px solid black;
     border-bottom-color: transparent;
 }
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:hover, 
 .navbar-default .navbar-nav > .open > a:focus {
-    color: rgb(251, 225, 34);
+    color: black;
     background-color: rgb(218, 41, 28);
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
@@ -185,7 +185,7 @@ div.list_item:hover >div>.file_icon:before
 span#login_widget > .button, #logout, #shutdown {
     color: rgb(218, 41, 28);
     background-color: rgb(251, 225, 34);
-    border: 2px solid rgb(251, 225, 34);
+    border: 2px solid black;
     margin-left: 10px;
     font-weight: bold;
 }
@@ -202,7 +202,7 @@ span#login_widget > .button, #logout, #shutdown {
     color:rgb(218, 41, 28);
 }
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
-    color: rgb(251, 225, 34);
+    color: black;
     text-decoration: none;
     background-color: rgb(218, 41, 28);
 }
@@ -223,7 +223,7 @@ span#login_widget > .button, #logout, #shutdown {
     font-weight: bold;
 }
 .dropdown-menu > li:hover >a> .kb,.dropdown-menu > li:hover >a> .kb kbd{
-    color: rgb(251, 225, 34);  
+    color: black;  
 }
 .item_icon{
     color:rgb(218, 41, 28);
@@ -232,7 +232,7 @@ span#login_widget > .button, #logout, #shutdown {
  color:rgb(218, 41, 28);
 }
 .dropdown-menu > li:hover > a > *:before{
-    color:rgb(251, 225, 34);
+    color:black;
 }
 .dropdown-menu .divider{
     background-color: rgb(218, 41, 28);
@@ -262,7 +262,8 @@ width:100% ;
 }
 div.navbar-text,.navbar-text,
 .navbar-text.indicator_area,
-p.navbar-text.indicator_area,#kernel_indicator {
+p.navbar-text.indicator_area,#kernel_indicator,
+#kernel_indicator .kernel_indicator_name {
     color: rgb(218, 41, 28);
     font-weight: bold;
 }
@@ -287,7 +288,7 @@ div#maintoolbar {
  display: inline;
  font-size: 92%;
  background-color: rgb(218, 41, 28);
- color: rgb(251, 225, 34);
+ color: black;
  border-width: 0px;
 }
 
@@ -393,11 +394,12 @@ font-size:11px;
     background-color:rgb(218, 41, 28);
 }
 #running .panel-group .panel .panel-body .list_container:hover{
-    color:rgb(251, 225, 34);
+    color:black;
 }
 #modal_indicator{
-    color: rgb(251, 225, 34);
+    color: black;
 }
+
 
 /*colors on nbexten*/
 ul#ui-id-1{

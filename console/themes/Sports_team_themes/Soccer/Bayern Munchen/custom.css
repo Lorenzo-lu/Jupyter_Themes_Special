@@ -262,7 +262,8 @@ width:100% ;
 }
 div.navbar-text,.navbar-text,
 .navbar-text.indicator_area,
-p.navbar-text.indicator_area,#kernel_indicator {
+p.navbar-text.indicator_area,#kernel_indicator,
+#kernel_indicator .kernel_indicator_name {
     color: white;
     font-weight: bold;
 }
@@ -398,6 +399,7 @@ font-size:11px;
 #modal_indicator{
     color: white;
 }
+
 
 /*colors on nbexten*/
 ul#ui-id-1{

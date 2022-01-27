@@ -72,24 +72,24 @@ body > #header .header-bar {
 }
 .container { 
     width:60%;    
-    background-color: rgb(251,9,11);
+    background-color: black;
     padding: 0% 5%; 
     opacity: 1;
-    color: black;
+    color: rgb(251,9,11);
     font-weight: bold;
     min-height: 100%;
 }
 .container a {
-    color: black;
+    color: rgb(251,9,11);
     font-weight: bold;
     border: none;
 } 
 
 .list_container {
-    border: 2px solid black;
+    border: 2px solid rgb(251,9,11);
 }
 .list_container > div {    
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(251,9,11);
 }
 
 .list_header a {
@@ -105,7 +105,7 @@ body > #header .header-bar {
     vertical-align: middle;
 }
 div.list_item a, div.list_item {
-    color: black;
+    color: rgb(251,9,11);
 }
 div.list_item:hover {
     background-color:black;  
@@ -117,28 +117,28 @@ div.list_item:hover a {
 
 /*文件前的图标*/
 .notebook_icon:before {
-    color: black;
+    color: rgb(251,9,11);
     font-weight: bold;
     content: "\f02d";
     vertical-align: middle;    
 }
 .running_notebook_icon:before {
-    color: black;
+    color: rgb(251,9,11);
     font-weight: bold;
     content: "\f040" ;
     vertical-align: middle;
 }
 .item_buttons .running-indicator {
-    color:black;
+    color:rgb(251,9,11);
 }
 .file_icon:before{
-    color:black;
+    color:rgb(251,9,11);
     font-weight: bold;
     vertical-align:middle;
     content: "\f0c5";
 }
 .folder_icon:before{
-    color: black;
+    color: rgb(251,9,11);
     font-weight: bold;
     vertical-align:middle;
 }
@@ -170,22 +170,22 @@ div.list_item:hover >div>.file_icon:before
 .nav-tabs > li.active > a:focus{
     color:white;
     background-color: black;
-    border: 2px solid black;
+    border: 2px solid rgb(251,9,11);
     border-bottom-color: transparent;
 }
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:hover, 
 .navbar-default .navbar-nav > .open > a:focus {
-    color: black;
-    background-color: rgb(251,9,11);
+    color: rgb(251,9,11);
+    background-color: black;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
-    color:rgb(251,9,11);
+    color:black;
 }
 span#login_widget > .button, #logout, #shutdown {
     color: white;
     background-color: black;
-    border: 2px solid black;
+    border: 2px solid rgb(251,9,11);
     margin-left: 10px;
     font-weight: bold;
 }
@@ -202,9 +202,9 @@ span#login_widget > .button, #logout, #shutdown {
     color:white;
 }
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
-    color: black;
+    color: rgb(251,9,11);
     text-decoration: none;
-    background-color: rgb(251,9,11);
+    background-color: black;
 }
 .dropdown-submenu > a:after {
     color:white;
@@ -223,7 +223,7 @@ span#login_widget > .button, #logout, #shutdown {
     font-weight: bold;
 }
 .dropdown-menu > li:hover >a> .kb,.dropdown-menu > li:hover >a> .kb kbd{
-    color: black;  
+    color: rgb(251,9,11);  
 }
 .item_icon{
     color:white;
@@ -232,7 +232,7 @@ span#login_widget > .button, #logout, #shutdown {
  color:white;
 }
 .dropdown-menu > li:hover > a > *:before{
-    color:black;
+    color:rgb(251,9,11);
 }
 .dropdown-menu .divider{
     background-color: white;
@@ -262,7 +262,8 @@ width:100% ;
 }
 div.navbar-text,.navbar-text,
 .navbar-text.indicator_area,
-p.navbar-text.indicator_area,#kernel_indicator {
+p.navbar-text.indicator_area,#kernel_indicator, 
+#kernel_indicator .kernel_indicator_name {
     color: white;
     font-weight: bold;
 }
@@ -286,8 +287,8 @@ div#maintoolbar {
  vertical-align: middle;
  display: inline;
  font-size: 92%;
- background-color: rgb(251,9,11);
- color: black;
+ background-color: black;
+ color: rgb(251,9,11);
  border-width: 0px;
 }
 
@@ -349,7 +350,7 @@ div.prompt,.prompt {
 }
 
 .cm-s-ipython span.cm-keyword {
-    /*color: rgb(251,9,11);*/
+    /*color: black;*/
     font-weight: bold;
 }
 
@@ -390,14 +391,15 @@ font-size:11px;
 }
 
 #running .panel-group .panel .panel-body .list_container{
-    background-color:rgb(251,9,11);
+    background-color:black;
 }
 #running .panel-group .panel .panel-body .list_container:hover{
-    color:black;
+    color:rgb(251,9,11);
 }
 #modal_indicator{
-    color: black;
+    color: rgb(251,9,11);
 }
+
 
 /*colors on nbexten*/
 ul#ui-id-1{

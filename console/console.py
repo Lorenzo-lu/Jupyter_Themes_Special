@@ -35,6 +35,8 @@ def render_style(theme, code_size, code_line_height, markdown_size, markdown_lin
         'Barcelona':'Sports_team_themes/Soccer/Barcelona',
         'AC_Milan': 'Sports_team_themes/Soccer/AC Milan',
         'Inter_Milan': 'Sports_team_themes/Soccer/Inter Milan',
+        'Chelsea': 'Sports_team_themes/Soccer/Chelsea',
+        'Manchester_United': 'Sports_team_themes/Soccer/Manchester United'
         }; 
     
     

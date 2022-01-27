@@ -25,9 +25,11 @@ body > #header #header-container{
     padding-left:10%;
 }
 #kernel_indicator {
-    margin-right:5%;
+    margin-right:5%;    
 }
-
+#kernel_indicator .kernel_indicator_name{
+    color: rgba(245,145,0,1)!important;
+}
 
 body > #header {
     opacity: 1;
