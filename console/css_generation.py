@@ -110,7 +110,7 @@ def css_generation(PATH, theme_key, theme, markdown_size, markdown_line_height,
     #css = css + 'div.prompt,.prompt{\nfont-size:%s;\n\
     #    }\n\n'%(code_size);
 
-    markdown_code_size = markdown_size;
+    markdown_code_size = '0.9em';
     markdown_code_color = 'blue';
     #markdown_code_family = 'consolas_code';
     markdown_code_family = code_font; 
