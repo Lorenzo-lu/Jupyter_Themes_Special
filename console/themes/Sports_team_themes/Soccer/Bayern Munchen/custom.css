@@ -84,6 +84,10 @@ body > #header .header-bar {
     font-weight: bold;
     border: none;
 } 
+.rendered_html :link, .rendered_html :visited{
+    color:blue;
+    font-weight: normal;
+}
 
 .list_container {
     border: 2px solid white;
